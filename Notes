@@ -9,7 +9,7 @@
 variable_name = value 
 age = 20
 score = 2100
-### Tip : Spaces in Python (bulb emoji)
+### Tip 💡: Spaces in Python (bulb emoji)
 - Variables names **Can not use spaces,we use underscore (_) instead 
 -This style of writing with "_" is called snake_case
 ### Examples 
@@ -23,7 +23,7 @@ score = 2100
 ### Examples 
 -text1 = 'This is a sentence'
 -text2 = "This is also a sentence"
-### Tip : (add builb)
+### Tip💡 : (add builb)
 To create a string you have to use a single or double quotes around the sentence you want to create 
 
 
@@ -32,7 +32,7 @@ To create a string you have to use a single or double quotes around the sentence
 ### Examples 
 variable_true = True
 variable_false = False
-### Tip
+### Tip💡
 -Boolean is case sensitive. It must start with a capital T or F 
--'true' (add wrong )
--'True' (add right)
+-'true' ❌️
+-'True' (add right✅️)
