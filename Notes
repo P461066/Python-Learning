@@ -29,5 +29,10 @@ To create a string you have to use a single or double quotes around the sentence
 
 ## Boolean/bool 
 -A boolean is a data type that has only 2 possible value: True or False and it ts used to check whether a condition is true or false
-
-
+### Examples 
+variable_true = True
+variable_false = False
+### Tip
+-Boolean is case sensitive. It must start with a capital T or F 
+-'true' (add wrong )
+-'True' (add right)
