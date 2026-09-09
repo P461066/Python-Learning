@@ -131,3 +131,33 @@ var1 = 13
 var2 = 13
 var3 = var1 == var2 #var2 will be True because both are 13 
 print(var3)
+
+# --- 8. LOGICAL OPERATORS
+# They combine comparison results and returns True or False 
+
+# and -> Returns True if both conditions are True 
+# Example:(13 > 12 and 12 < 13) returns True 
+# Example:(13 > 12 and 13 < 12) returns False
+
+# or -> Returns True if at least one is True 
+# Example:(13 > 12 or 13 < 12) returns True 
+# Example:(13 < 12 or 13 == 12) returns False
+
+# not -> Flips the result,True becomes False and False becomes True 
+# Example: not(13 > 12)returns False 
+# Example: not(13 < 12) returns True 
+
+# Example 1: 
+var1 = 13 
+var2 = 12 
+result = var1 > var2 and var2 < var1 #result will be True 
+
+# Example 2: 
+var1 = 13 
+var2 = 12 
+result = var1 > var2 or var2 < var1 #result wwil be True 
+
+# Example 3: 
+var1 = 13 
+var2 = 12 
+result = not var1 < var2 #results will be True 
