@@ -10,7 +10,7 @@ variable_name = value
 age = 20
 score = 2100
 ### Tip 💡
-: Spaces in Python (bulb emoji)
+: Spaces in Python 
 - Variables names **Can not use spaces,we use underscore (_) instead 
 -This style of writing with "_" is called snake_case
 ### Examples 
@@ -38,4 +38,27 @@ variable_false = False
 -Boolean is case sensitive. It must start with a capital T or F 
 -'true' ❌️
 -'True' ✅️
+
+## Arithmetic operators 
+### Addition (+)
+-example:
+3 + 2 = 5
+
+### Subtraction (-)
+-example:
+3 - 2 = 1 
+
+### Multiplication 
+-example:
+3 * 2 = 6
+
+### Division (/)
+-example:
+4 / 2 = 2
+
+### Example Usage 
+#### Addition (+)
+a = 2 
+b = 3 
+c = a + b  
 
