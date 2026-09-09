@@ -20,7 +20,7 @@ score = 2100
 # This style is called snake_case.
 
 # Examples:
-# my score = 100  ❌ Wrong - spaces not allowed
+# my score = 100  ❌ Wrong spaces not allowed
 # my_score = 10000  ✅ Correct
 
 # --- 2. STRING (str) ---
@@ -69,3 +69,65 @@ a = 2
 b = 3
 c = a + b  # c will be 5
 print(c)
+
+# --- 5. SHORTCUT OPERATORS (Self arithmetic)
+# instead of writing a = a + 3,we can write a += 3 (faster way)
+
+# Addition shortcut (+=)
+a = 10 
+a += 3 # same as a = a + 3 -> is now 13 
+
+# Subtraction shortcut (-=)
+a -= 3 # same as a = a - 3 -> 7 
+
+# Multiplication shortcut (*=)
+a *= 3 # same as a = a * 3 -> is now 30 
+
+# Division shortcut (/=)
+a /= 3 # same as a = a / 3 -> is now 3.33
+
+# Modulus shortcut (%=) 
+a %= 3 # same as a = a % 3 -> is now 1
+
+# --- 6. MODULUS OPERATOR (%) - VERY IMPORTANT 
+# % gives you the REMAINDER of a division 
+
+results = 10 % 3 # 10 /  3 = 3 remainder 1, so results is 1 
+
+# Common use: Check if number is even or odd 
+# Even: number % 2 == 0 
+# Odd: number % 2 == 1 
+
+# --- 7. COMPARISON OPERATORS 
+# Comparison operators compare 3 values and return True or False (Boolean)
+
+# == Equal to 
+print(1 == 2) # False, because 1 is not equal to 2
+print(1 == 1) # True 
+
+# != Not equal to 
+print(1 != 2) # True,because 1 is not equal to 2 
+
+# > Greater than 
+print(1 > 2) # False,because 1 is not greater than 2 
+
+# < Less than 
+print(1 < 2) # True,1 is less than 2 
+
+# >= Greater than or equal to 
+print(1 >= 2) # False 
+
+# <= Less than or equal to 
+print(1 <= 2) # True 
+
+# Example 1: 
+var1 = 13 
+var2 = 12 
+var3 = var1 != var2 # var3 will be True because 13 is not equal to 12
+print(var3)
+
+# Example 2:
+var1 = 13 
+var2 = 13
+var3 = var1 == var2 #var2 will be True because both are 13 
+print(var3)
