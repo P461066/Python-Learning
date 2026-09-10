@@ -98,10 +98,6 @@ results = 10 % 3 # 10 /  3 = 3 remainder 1, so results is 1
 # Even: number % 2 == 0 
 # Odd: number % 2 == 1 
 
-# ====================================
-# DAY 3 - 10 September 2026
-# ====================================
-
 # --- 7. COMPARISON OPERATORS 
 # Comparison operators compare 3 values and return True or False (Boolean)
 
@@ -170,7 +166,7 @@ result = not var1 < var2 #results will be True
 # DAY 3 - 10 September 2026
 # ====================================
 
-# --- 7. DE MORGAN'S LAWS ---
+# --- 9. DE MORGAN'S LAWS ---
 # Rules for how to distribute 'not' over 'and' / 'or'.
 # Very useful for simplifying conditions
 
