@@ -181,7 +181,7 @@ result = not var1 < var2 #results will be True
 # Examples:
 # First Law example:
 number = 15 
-result = not (number >= 1 and number <=10)
+result = not(number >= 1 and number <=10)
 # This becomes: (not number >= 1) or (not number <= 10) 
 # Simplimfied: number < 1 or number > 10
 print(result) # True,because 15 > 10 
