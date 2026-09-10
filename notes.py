@@ -47,7 +47,7 @@ variable_false = False
 # True  ✅ Correct
 
 # ====================================
-# DAY 2 - 09 September 2026
+# 📅 DAY 2 - 09 September 2026
 # ====================================
 
 # --- 4. ARITHMETIC OPERATORS ---
@@ -163,7 +163,7 @@ var2 = 12
 result = not var1 < var2 #results will be True 
 
 # ====================================
-# DAY 3 - 10 September 2026
+# 📅 DAY 3 - 10 September 2026
 # ====================================
 
 # --- 9. DE MORGAN'S LAWS ---
@@ -173,7 +173,7 @@ result = not var1 < var2 #results will be True
 # Rule 1:not (A and B) becomes (not A) or (not B)
 # Rule 2:not (A or B) becomes (not A) and (not B) 
 
-# Tip:The FLIP Rule 
+# 💡 Tip:The FLIP Rule 
 # When you distribute 'not' 
 # 1. Each part gets 'not'
 # 2. The operator FLIPS; and <-> or 
