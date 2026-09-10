@@ -47,7 +47,7 @@ variable_false = False
 # True  ✅ Correct
 
 # ====================================
-# 📅 DAY 2 - 09 September 2026
+# DAY 2 - 09 September 2026
 # ====================================
 
 # --- 4. ARITHMETIC OPERATORS ---
@@ -97,6 +97,10 @@ results = 10 % 3 # 10 /  3 = 3 remainder 1, so results is 1
 # Common use: Check if number is even or odd 
 # Even: number % 2 == 0 
 # Odd: number % 2 == 1 
+
+# ====================================
+# DAY 3 - 10 September 2026
+# ====================================
 
 # --- 7. COMPARISON OPERATORS 
 # Comparison operators compare 3 values and return True or False (Boolean)
@@ -161,3 +165,34 @@ result = var1 > var2 or var2 < var1 #result wwil be True
 var1 = 13 
 var2 = 12 
 result = not var1 < var2 #results will be True 
+
+# ====================================
+# DAY 3 - 10 September 2026
+# ====================================
+
+# --- 7. DE MORGAN'S LAWS ---
+# Rules for how to distribute 'not' over 'and' / 'or'.
+# Very useful for simplifying conditions
+
+# Rule 1:not (A and B) becomes (not A) or (not B)
+# Rule 2:not (A or B) becomes (not A) and (not B) 
+
+# Tip:The FLIP Rule 
+# When you distribute 'not' 
+# 1. Each part gets 'not'
+# 2. The operator FLIPS; and <-> or 
+
+# Examples:
+# First Law example:
+number = 15 
+result = not (number >= 1 and number <=10)
+# This becomes: (not number >= 1) or (not number <= 10) 
+# Simplimfied: number < 1 or number > 10
+print(result) # True,because 15 > 10 
+
+# Second Law example:
+is_student = False
+is_employed = False 
+result2 = not(is_student or is_employed)
+# This becomes: (not is_student) and (not is_employed)
+print(result2) #True
