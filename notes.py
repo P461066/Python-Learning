@@ -194,7 +194,7 @@ result2 = not(is_student or is_employed)
 print(result2) #True
 
 # ====================================
-# Day 4 - 11 September 2026
+# 📅Day 4 - 11 September 2026
 # ====================================
 
 # ---10. IF STATEMENTS ---
@@ -263,7 +263,7 @@ if age > 18:
 else:
   print("Too young to drive")
 
-# Tip:Nesting can be infinite,but don't overdo it.
+# 💡Tip:Nesting can be infinite,but don't overdo it.
 # You can do if inside if inside if.....
 
 # if condition1:
