@@ -192,3 +192,84 @@ is_employed = False
 result2 = not(is_student or is_employed)
 # This becomes: (not is_student) and (not is_employed)
 print(result2) #True
+
+# ====================================
+# Day 4 - 11 September 2026
+# ====================================
+
+# ---10. IF STATEMENTS ---
+# if statements allow conditional execution of code.
+# The codes runs only if the condition is True.
+
+# Sytanx:
+# if conditiosn:
+# Indented code block.
+# Executed if condition is True.
+
+# Tip: Rule for if/elif/else 
+# 1.Code inside if,elif,and else block MUST be indented.
+# 2.Use a colon (:) after the condition.
+# 3.Indent the code block with 4 spaces or a tab.
+# 4.You can have multiple elif statements.
+# 5.The else block is optional and execute when no conditions are met.
+
+# Examples:
+age = 20 
+status = "child"
+if age > 18:
+  status = "Adult"
+age += 1 
+print(status) #Adult,because 20 > 18 
+
+# Example with elif and else 
+score = 75 
+if score >= 90:
+  print("A")
+elif score >= 50:
+  print("B") # Thia will print
+else:
+  print("C")
+
+# Example 2 
+if condition:
+  code
+elif another_condition:
+  code
+else:
+  code
+
+# ---11. NESTED IF-ELIF-ELSE---
+# Nested statement allow for hierarchical decision making. 
+# You put an if inside another if.
+
+# Sytanx:
+# if condition1: 
+#   if conditions2:
+#     # Code when both condition1 and condition2 are True
+#   else:
+#     # Code when condition1 is true but condition2 is false
+# else:
+#  # Code when condition1 is false
+
+# Example of nested conditions
+age = 20 
+has_license = True
+
+if age > 18:
+  if has_lincese:
+    print("You can drive")
+  else:
+    print("Get a lincense first")
+else:
+  print("Too young to drive")
+
+# Tip:Nesting can be infinite,but don't overdo it.
+# You can do if inside if inside if.....
+
+# if condition1:
+#    if condition2:
+#       if condition3:
+#          # More nested condition....
+#          print("All conditions true")
+
+# Simple rule: The more indented,the deeper the check
