@@ -206,7 +206,7 @@ print(result2) #True
 # Indented code block.
 # Executed if condition is True.
 
-# Tip: Rule for if/elif/else 
+# 💡Tip: Rule for if/elif/else 
 # 1.Code inside if,elif,and else block MUST be indented.
 # 2.Use a colon (:) after the condition.
 # 3.Indent the code block with 4 spaces or a tab.
