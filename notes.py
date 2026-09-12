@@ -273,3 +273,52 @@ else:
 #          print("All conditions true")
 
 # Simple rule: The more indented,the deeper the check
+
+# ====================================
+# DAY 5 - 12 September 2026
+# ====================================
+
+# --- 12. INPUT() FUNCTION ---
+# To get from a user.
+
+# var = input()-> always stored as a string,even for numbers
+
+# Example:
+# name = input()
+# print(name)
+
+# To print a greeting with input 
+# name = input()
+# print("Hello" + name)
+
+# ---12.CASTING IN PYTHON---
+# Casting = converting one data to another
+# Because input() is always string, we need to cast to use it as a number 
+
+# int = Whole number,no decimal
+# Example: 5,20,-10,68,97,999,0
+# Converting string to int(whole number)
+# var = int(input()) #"24" -> 24
+
+# Float = Decimal number
+# Examples: 11.2, 3.2, 23.3, -21,2
+# Convert string to float (decimal number)
+# var = float(input()) # "67,453" -> 67,453
+
+# Convert to boolean:
+# var = bool(input())
+
+# Convert to string:
+# var = str(input())
+
+# Examples:
+# age = int(input()) -> if user types 20,age = 20 as int(whole)
+# price = float(input()) -> if user types 9.99,price = 9.99 as float (decimal)
+
+# ---13.IMPORTANT DIFFERENCE---
+# Adding strings concatenates them,while adding numbers does arithmetic
+
+# "5" + "5" = "55" # String concatenation
+# 5 + 5 = 10 # Numeric addition
+
+# So you MUST cast 
