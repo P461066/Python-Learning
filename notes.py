@@ -291,7 +291,7 @@ else:
 # name = input()
 # print("Hello" + name)
 
-# ---12.CASTING IN PYTHON---
+# ---13.CASTING IN PYTHON---
 # Casting = converting one data to another
 # Because input() is always string, we need to cast to use it as a number 
 
@@ -321,4 +321,18 @@ else:
 # "5" + "5" = "55" # String concatenation
 # 5 + 5 = 10 # Numeric addition
 
-# So you MUST cast 
+# So you MUST cast: 
+# num1 = int(input()) # "5" becomes 5 (whole number)
+# num2 = int(input()) # "5" becomes 5 (whole number)
+# print(num1 + num2) # it will output 10, not 55
+
+# --- 14. MULTIPLE INPUTS ---
+# You can ask for input multiple times 
+
+# var1 = input()
+# var2 = input()
+
+# Example:
+# first_name = input()
+# last_name = input()
+# print(first_name + " " + last_name)
