@@ -315,7 +315,7 @@ else:
 # age = int(input()) -> if user types 20,age = 20 as int(whole)
 # price = float(input()) -> if user types 9.99,price = 9.99 as float (decimal)
 
-# ---13.IMPORTANT DIFFERENCE---
+# ---14.IMPORTANT DIFFERENCE---
 # Adding strings concatenates them,while adding numbers does arithmetic
 
 # "5" + "5" = "55" # String concatenation
@@ -326,7 +326,7 @@ else:
 # num2 = int(input()) # "5" becomes 5 (whole number)
 # print(num1 + num2) # it will output 10, not 55
 
-# --- 14. MULTIPLE INPUTS ---
+# --- 15. MULTIPLE INPUTS ---
 # You can ask for input multiple times 
 
 # var1 = input()
