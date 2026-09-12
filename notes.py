@@ -5,8 +5,8 @@
 # 📅 DAY 1 - 08 September 2026
 # ====================================
 
-# --- 1. VARIABLES ---
-# A variable is like a container that holds data values.
+# 1. VARIABLES
+# A variable is a container that holds data values.
 # It is used to store, manipulate, and display information.
 # Python automatically detects the data type.
 
@@ -15,34 +15,26 @@
 age = 20
 score = 2100
 
-# 💡 Tip: Spaces in Python
-# Variable names CANNOT use spaces. We use underscore (_) instead.
-# This style is called snake_case.
-
+# Tip: Spaces in Python
+# Variable names CANNOT use spaces. Use underscore (_) instead (snake_case).
 # Examples:
-# my score = 100  ❌ Wrong spaces not allowed
-# my_score = 10000  ✅ Correct
+# my score = 100  ❌ Wrong
+# my_score = 10000 ✅ Correct
 
-# --- 2. STRING (str) ---
-# A string is used to create/store text or a sentence in Python.
-
-# Examples:
+# 2. STRINGS (str)
+# A string stores text in Python.
 text1 = 'This is a sentence'
 text2 = "This is also a sentence"
 
-# 💡 Tip: 
-# To create a string you have to use single (' ') or double (" ") quotes around the text.
+# Tip:
+# To create a string, use single ('') or double ("") quotes around the text.
 
-# --- 3. BOOLEAN (bool) ---
-# A boolean is a data type that has only 2 possible values: True or False.
-# It is used to check whether a condition is true or false.
-
-# Examples:
+# 3. BOOLEANS (bool)
+# A boolean is a data type with only two values: True or False.
 variable_true = True
 variable_false = False
 
-# 💡 Tip: Case Sensitive!
-# Boolean must start with a capital T or F.
+# Tip: Case sensitive
 # true  ❌ Wrong
 # True  ✅ Correct
 
@@ -50,289 +42,195 @@ variable_false = False
 # 📅 DAY 2 - 09 September 2026
 # ====================================
 
-# --- 4. ARITHMETIC OPERATORS ---
+# 4. ARITHMETIC OPERATORS
+# +  addition
+# -  subtraction
+# *  multiplication
+# /  division (float division)
 
-# 1. Addition (+)
-# Example: 3 + 2 = 5
-
-# 2. Subtraction (-)
-# Example: 3 - 2 = 1
-
-# 3. Multiplication (*)
-# Example: 3 * 2 = 6
-
-# 4. Division (/)
-# Example: 4 / 2 = 2
-
-# Example Usage:
+# Example:
 a = 2
 b = 3
-c = a + b  # c will be 5
-print(c)
+c = a + b  # c == 5
 
-# --- 5. SHORTCUT OPERATORS (Self arithmetic)
-# instead of writing a = a + 3,we can write a += 3 (faster way)
+# 5. SHORTCUT (IN-PLACE) OPERATORS
+# Instead of writing a = a + 3 you can write a += 3
 
-# Addition shortcut (+=)
-a = 10 
-a += 3 # same as a = a + 3 -> is now 13 
+# Example sequence (shown as independent examples):
+a = 10
+a += 3  # a == 13
 
-# Subtraction shortcut (-=)
-a -= 3 # same as a = a - 3 -> 7 
+a = 10
+a -= 3  # a == 7
 
-# Multiplication shortcut (*=)
-a *= 3 # same as a = a * 3 -> is now 30 
+a = 10
+a *= 3  # a == 30
 
-# Division shortcut (/=)
-a /= 3 # same as a = a / 3 -> is now 3.33
+a = 10
+a /= 3  # a == 3.333...
 
-# Modulus shortcut (%=) 
-a %= 3 # same as a = a % 3 -> is now 1
+a = 10
+a %= 3  # a == 1
 
-# --- 6. MODULUS OPERATOR (%) - VERY IMPORTANT 
-# % gives you the REMAINDER of a division 
+# 6. MODULUS OPERATOR (%) - gives remainder of a division
+results = 10 % 3  # 10 / 3 => remainder 1, so results == 1
 
-results = 10 % 3 # 10 /  3 = 3 remainder 1, so results is 1 
+# Common use: check if number is even or odd
+# Even: number % 2 == 0
+# Odd:  number % 2 == 1
 
-# Common use: Check if number is even or odd 
-# Even: number % 2 == 0 
-# Odd: number % 2 == 1 
+# 7. COMPARISON OPERATORS
+# They compare two values and return True or False (Boolean).
+# ==  equal to
+# !=  not equal to
+# >   greater than
+# <   less than
+# >=  greater than or equal to
+# <=  less than or equal to
 
-# --- 7. COMPARISON OPERATORS 
-# Comparison operators compare 3 values and return True or False (Boolean)
+# Examples:
+_example_eq = (1 == 2)  # False
+_example_eq2 = (1 == 1)  # True
+_example_ne = (1 != 2)  # True
+_example_gt = (1 > 2)   # False
+_example_lt = (1 < 2)   # True
+_example_ge = (1 >= 2)  # False
+_example_le = (1 <= 2)  # True
 
-# == Equal to 
-print(1 == 2) # False, because 1 is not equal to 2
-print(1 == 1) # True 
+var1 = 13
+var2 = 12
+var3 = var1 != var2  # True
 
-# != Not equal to 
-print(1 != 2) # True,because 1 is not equal to 2 
-
-# > Greater than 
-print(1 > 2) # False,because 1 is not greater than 2 
-
-# < Less than 
-print(1 < 2) # True,1 is less than 2 
-
-# >= Greater than or equal to 
-print(1 >= 2) # False 
-
-# <= Less than or equal to 
-print(1 <= 2) # True 
-
-# Example 1: 
-var1 = 13 
-var2 = 12 
-var3 = var1 != var2 # var3 will be True because 13 is not equal to 12
-print(var3)
-
-# Example 2:
-var1 = 13 
+var1 = 13
 var2 = 13
-var3 = var1 == var2 #var2 will be True because both are 13 
-print(var3)
+var3 = var1 == var2  # True
 
-# --- 8. LOGICAL OPERATORS
-# They combine comparison results and returns True or False 
+# 8. LOGICAL OPERATORS
+# and -> True if both operands are True
+# or  -> True if at least one operand is True
+# not -> negates the boolean value
 
-# and -> Returns True if both conditions are True 
-# Example:(13 > 12 and 12 < 13) returns True 
-# Example:(13 > 12 and 13 < 12) returns False
-
-# or -> Returns True if at least one is True 
-# Example:(13 > 12 or 13 < 12) returns True 
-# Example:(13 < 12 or 13 == 12) returns False
-
-# not -> Flips the result,True becomes False and False becomes True 
-# Example: not(13 > 12)returns False 
-# Example: not(13 < 12) returns True 
-
-# Example 1: 
-var1 = 13 
-var2 = 12 
-result = var1 > var2 and var2 < var1 #result will be True 
-
-# Example 2: 
-var1 = 13 
-var2 = 12 
-result = var1 > var2 or var2 < var1 #result wwil be True 
-
-# Example 3: 
-var1 = 13 
-var2 = 12 
-result = not var1 < var2 #results will be True 
+# Examples:
+var1 = 13
+var2 = 12
+result_and = (var1 > var2 and var2 < var1)  # True
+result_or = (var1 > var2 or var2 < var1)   # True
+result_not = (not (var1 < var2))           # True
 
 # ====================================
 # 📅 DAY 3 - 10 September 2026
 # ====================================
 
-# --- 9. DE MORGAN'S LAWS ---
-# Rules for how to distribute 'not' over 'and' / 'or'.
-# Very useful for simplifying conditions
-
-# Rule 1:not (A and B) becomes (not A) or (not B)
-# Rule 2:not (A or B) becomes (not A) and (not B) 
-
-# 💡 Tip:The FLIP Rule 
-# When you distribute 'not' 
-# 1. Each part gets 'not'
-# 2. The operator FLIPS; and <-> or 
+# 9. DE MORGAN'S LAWS
+# not (A and B) == (not A) or (not B)
+# not (A or B)  == (not A) and (not B)
+# When you distribute not, flip and <-> or
 
 # Examples:
-# First Law example:
-number = 15 
-result = not(number >= 1 and number <=10)
-# This becomes: (not number >= 1) or (not number <= 10) 
-# Simplimfied: number < 1 or number > 10
-print(result) # True,because 15 > 10 
+number = 15
+result = not (number >= 1 and number <= 10)
+# Equivalent: number < 1 or number > 10
 
-# Second Law example:
 is_student = False
-is_employed = False 
-result2 = not(is_student or is_employed)
-# This becomes: (not is_student) and (not is_employed)
-print(result2) #True
+is_employed = False
+result2 = not (is_student or is_employed)
+# Equivalent: (not is_student) and (not is_employed)
 
 # ====================================
-# 📅Day 4 - 11 September 2026
+# 📅 DAY 4 - 11 September 2026
 # ====================================
 
-# ---10. IF STATEMENTS ---
-# if statements allow conditional execution of code.
-# The codes runs only if the condition is True.
+# 10. IF STATEMENTS
+# Conditional execution:
+# if condition:
+#     indented code runs only if condition is True
 
-# Sytanx:
-# if conditiosn:
-# Indented code block.
-# Executed if condition is True.
+# Tips for if / elif / else:
+# - Use a colon (:) after the condition
+# - Indent the block (4 spaces recommended)
+# - You can have multiple elifs; else is optional
 
-# 💡Tip: Rule for if/elif/else 
-# 1.Code inside if,elif,and else block MUST be indented.
-# 2.Use a colon (:) after the condition.
-# 3.Indent the code block with 4 spaces or a tab.
-# 4.You can have multiple elif statements.
-# 5.The else block is optional and execute when no conditions are met.
-
-# Examples:
-age = 20 
+# Example:
+age = 20
 status = "child"
 if age > 18:
-  status = "Adult"
-age += 1 
-print(status) #Adult,because 20 > 18 
+    status = "adult"
+# age += 1  # changing age after the check won't change the result above
 
-# Example with elif and else 
-score = 75 
+# Example with elif / else:
+score = 75
 if score >= 90:
-  print("A")
+    grade = "A"
 elif score >= 50:
-  print("B") # Thia will print
+    grade = "B"
 else:
-  print("C")
+    grade = "C"
 
-# Example 2 
-if condition:
-  code
-elif another_condition:
-  code
-else:
-  code
+# 11. NESTED IF / ELIF / ELSE
+# You can put an if inside another if for hierarchical decisions.
+# Keep nesting depth reasonable for readability.
 
-# ---11. NESTED IF-ELIF-ELSE---
-# Nested statement allow for hierarchical decision making. 
-# You put an if inside another if.
-
-# Sytanx:
-# if condition1: 
-#   if conditions2:
-#     # Code when both condition1 and condition2 are True
-#   else:
-#     # Code when condition1 is true but condition2 is false
-# else:
-#  # Code when condition1 is false
-
-# Example of nested conditions
-age = 20 
+age = 20
 has_license = True
 
 if age > 18:
-  if has_lincese:
-    print("You can drive")
-  else:
-    print("Get a lincense first")
+    if has_license:
+        drive_message = "You can drive"
+    else:
+        drive_message = "Get a license first"
 else:
-  print("Too young to drive")
-
-# 💡Tip:Nesting can be infinite,but don't overdo it.
-# You can do if inside if inside if.....
-
-# if condition1:
-#    if condition2:
-#       if condition3:
-#          # More nested condition....
-#          print("All conditions true")
-
-# Simple rule: The more indented,the deeper the check
+    drive_message = "Too young to drive"
 
 # ====================================
-# DAY 5 - 12 September 2026
+# 📅 DAY 5 - 12 September 2026
 # ====================================
 
-# --- 12. INPUT() FUNCTION ---
-# To get from a user.
+# 12. input() FUNCTION
+# Use input() to get text from a user.
+# Always returns a string.
 
-# var = input()-> always stored as a string,even for numbers
+# Example (do not call during automated runs):
+# name = input('Enter your name: ')
+# print('Hello, ' + name)
 
-# Example:
-# name = input()
-# print(name)
-
-# To print a greeting with input 
-# name = input()
-# print("Hello" + name)
-
-# ---13.CASTING IN PYTHON---
-# Casting = converting one data to another
-# Because input() is always string, we need to cast to use it as a number 
-
-# int = Whole number,no decimal
-# Example: 5,20,-10,68,97,999,0
-# Converting string to int(whole number)
-# var = int(input()) #"24" -> 24
-
-# Float = Decimal number
-# Examples: 11.2, 3.2, 23.3, -21,2
-# Convert string to float (decimal number)
-# var = float(input()) # "67,453" -> 67,453
-
-# Convert to boolean:
-# var = bool(input())
-
-# Convert to string:
-# var = str(input())
+# 13. CASTING (CONVERSION)
+# Convert between types when needed.
+# int()   -> integer (whole number)
+# float() -> floating point (decimal)
+# str()   -> string
+# bool()  -> boolean (Note: bool(non-empty-string) is True)
 
 # Examples:
-# age = int(input()) -> if user types 20,age = 20 as int(whole)
-# price = float(input()) -> if user types 9.99,price = 9.99 as float (decimal)
+# age = int(input('Enter your age: '))   # "20" -> 20
+# price = float(input('Enter price: '))  # "9.99" -> 9.99
 
-# ---14.IMPORTANT DIFFERENCE---
-# Adding strings concatenates them,while adding numbers does arithmetic
+# 14. IMPORTANT DIFFERENCE
+# Adding strings concatenates them, while adding numbers performs arithmetic
+# "5" + "5" == "55"  # string concatenation
+# 5 + 5 == 10            # numeric addition
 
-# "5" + "5" = "55" # String concatenation
-# 5 + 5 = 10 # Numeric addition
+# So you MUST cast when reading numbers from input:
+# num1 = int(input())
+# num2 = int(input())
+# print(num1 + num2)  # outputs 10 if user enters 5 and 5
 
-# So you MUST cast: 
-# num1 = int(input()) # "5" becomes 5 (whole number)
-# num2 = int(input()) # "5" becomes 5 (whole number)
-# print(num1 + num2) # it will output 10, not 55
-
-# --- 15. MULTIPLE INPUTS ---
-# You can ask for input multiple times 
-
-# var1 = input()
-# var2 = input()
-
+# 15. MULTIPLE INPUTS
+# Ask for input multiple times if you need multiple values.
 # Example:
-# first_name = input()
-# last_name = input()
-# print(first_name + " " + last_name)
+# first_name = input('First name: ')
+# last_name = input('Last name: ')
+# print(first_name + ' ' + last_name)
+
+# Demo runner: put examples that print under this guard so importing this file won't execute them.
+
+def _demo():
+    print('Arithmetic example: 2 + 3 =', 2 + 3)
+    print('Modulus example: 10 % 3 =', 10 % 3)
+    print('Comparison example: 1 == 2 ->', 1 == 2)
+    print('De Morgan example (15):', result)
+    print('Drive message:', drive_message)
+    print('Grade for score 75:', grade)
+
+
+if __name__ == '__main__':
+    _demo()
