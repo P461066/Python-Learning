@@ -46,34 +46,30 @@ variable_false = False
 # +  addition
 # -  subtraction
 # *  multiplication
-# /  division (float division)
+# /  division (float division in Python 3)
+# // integer (floor) division
+# %  modulus (remainder)
+# ** exponentiation
 
 # Example:
 a = 2
 b = 3
 c = a + b  # c == 5
 
-# 5. SHORTCUT (IN-PLACE) OPERATORS
+# 5. AUGMENTED ASSIGNMENT (in-place) OPERATORS
 # Instead of writing a = a + 3 you can write a += 3
 
-# Example sequence (shown as independent examples):
+# Example sequence (independent examples):
 a = 10
-a += 3  # a == 13
-
-a = 10
-a -= 3  # a == 7
-
-a = 10
-a *= 3  # a == 30
-
-a = 10
-a /= 3  # a == 3.333...
-
-a = 10
-a %= 3  # a == 1
+# a += 3  -> a becomes 13
+# a -= 3  -> a becomes 7
+# a *= 3  -> a becomes 30
+# a /= 3  -> a becomes 3.333...
+# a %= 3  -> a becomes 1
 
 # 6. MODULUS OPERATOR (%) - gives remainder of a division
-results = 10 % 3  # 10 / 3 => remainder 1, so results == 1
+# Example:
+# results = 10 % 3  # 10 / 3 => remainder 1, so results == 1
 
 # Common use: check if number is even or odd
 # Even: number % 2 == 0
@@ -88,34 +84,24 @@ results = 10 % 3  # 10 / 3 => remainder 1, so results == 1
 # >=  greater than or equal to
 # <=  less than or equal to
 
-# Examples:
-_example_eq = (1 == 2)  # False
+# Examples (read-only; these show expected boolean results):
+_example_eq = (1 == 2)   # False
 _example_eq2 = (1 == 1)  # True
-_example_ne = (1 != 2)  # True
-_example_gt = (1 > 2)   # False
-_example_lt = (1 < 2)   # True
-_example_ge = (1 >= 2)  # False
-_example_le = (1 <= 2)  # True
-
-var1 = 13
-var2 = 12
-var3 = var1 != var2  # True
-
-var1 = 13
-var2 = 13
-var3 = var1 == var2  # True
+_example_ne = (1 != 2)   # True
+_example_gt = (1 > 2)    # False
+_example_lt = (1 < 2)    # True
+_example_ge = (1 >= 2)   # False
+_example_le = (1 <= 2)   # True
 
 # 8. LOGICAL OPERATORS
 # and -> True if both operands are True
 # or  -> True if at least one operand is True
 # not -> negates the boolean value
 
-# Examples:
-var1 = 13
-var2 = 12
-result_and = (var1 > var2 and var2 < var1)  # True
-result_or = (var1 > var2 or var2 < var1)   # True
-result_not = (not (var1 < var2))           # True
+# Example (conceptual):
+# (a > b) and (b < c)
+# (a > b) or (b < c)
+# not (a > b)
 
 # ====================================
 # 📅 DAY 3 - 10 September 2026
@@ -126,15 +112,8 @@ result_not = (not (var1 < var2))           # True
 # not (A or B)  == (not A) and (not B)
 # When you distribute not, flip and <-> or
 
-# Examples:
-number = 15
-result = not (number >= 1 and number <= 10)
-# Equivalent: number < 1 or number > 10
-
-is_student = False
-is_employed = False
-result2 = not (is_student or is_employed)
-# Equivalent: (not is_student) and (not is_employed)
+# Example (conceptual):
+# not (x > 0 and x < 10)  <==>  (x <= 0) or (x >= 10)
 
 # ====================================
 # 📅 DAY 4 - 11 September 2026
@@ -151,35 +130,35 @@ result2 = not (is_student or is_employed)
 # - You can have multiple elifs; else is optional
 
 # Example:
-age = 20
-status = "child"
-if age > 18:
-    status = "adult"
-# age += 1  # changing age after the check won't change the result above
+# age = 20
+# if age > 18:
+#     status = 'adult'
+# else:
+#     status = 'child'
 
 # Example with elif / else:
-score = 75
-if score >= 90:
-    grade = "A"
-elif score >= 50:
-    grade = "B"
-else:
-    grade = "C"
+# score = 75
+# if score >= 90:
+#     grade = 'A'
+# elif score >= 50:
+#     grade = 'B'
+# else:
+#     grade = 'C'
 
 # 11. NESTED IF / ELIF / ELSE
 # You can put an if inside another if for hierarchical decisions.
 # Keep nesting depth reasonable for readability.
 
-age = 20
-has_license = True
-
-if age > 18:
-    if has_license:
-        drive_message = "You can drive"
-    else:
-        drive_message = "Get a license first"
-else:
-    drive_message = "Too young to drive"
+# Example:
+# age = 20
+# has_license = True
+# if age > 18:
+#     if has_license:
+#         print('You can drive')
+#     else:
+#         print('Get a license first')
+# else:
+#     print('Too young to drive')
 
 # ====================================
 # 📅 DAY 5 - 12 September 2026
@@ -207,7 +186,7 @@ else:
 # 14. IMPORTANT DIFFERENCE
 # Adding strings concatenates them, while adding numbers performs arithmetic
 # "5" + "5" == "55"  # string concatenation
-# 5 + 5 == 10        # numeric addition
+# 5 + 5 == 10            # numeric addition
 
 # So you MUST cast when reading numbers from input:
 # num1 = int(input())
@@ -225,50 +204,66 @@ else:
 # 📅 DAY 6 - 13 September 2026
 # ====================================
 
-# --- 16. LOOPS: WHILE ---
+# 16. LOOPS: WHILE
 # A while loop runs as long as a condition is True.
-# Use it when you don't know beforehand how many times it will run.
+# Use a while loop when you don't know beforehand how many times it will run.
 
 # Syntax:
 # while condition:
 #     code
 
+# Example:
+# number = 27
+# power_of_two = 1
+# while power_of_two <= number:
+#     power_of_two *= 2  # update to avoid infinite loop
+# # After the loop, power_of_two is 32
+
 # Important points:
-# - Use comparison operators to form the condition: ==, <, >, <=, >=
-# - Use augmented assignment to update variable each time: +=, -=, *=, /=, %=
-# - If you don't update the variable used in the condition, you may create an infinite loop
+# - Ensure you update the variable used in the condition (or use a break) to avoid infinite loops
+# - You can use while True: with a break to create a loop that stops on a condition
 
-number = 27
-power_of_two = 1
-
-while power_of_two <= number:
-    power_of_two *= 2  # update to avoid infinite loop
-
-# After the loop, power_of_two is 32
-# Uncomment the line below to see the result when running directly:
-# print(power_of_two)  # 32
-
-# --- 17. LOOPS: FOR ---
+# 17. LOOPS: FOR
 # A for loop is used to iterate over a sequence (like a list or range)
 
 # Syntax:
-# for i in range(start, end):
-#     # code to be executed
+# for i in range(start, end[, step]):
+#     code
 
-# Range:
+# Range examples:
 # - range(end): starts from 0, goes up to (but not including) end
 # - range(start, end): goes from start to (but not including) end
+# - range(start, end, step): steps by step (step can be negative)
 
 # Examples:
-for i in range(5):
-    # Example action: print(i)
-    # print(i)  # 0,1,2,3,4
-    pass
+# for i in range(5):
+#     print(i)  # 0,1,2,3,4
 
-for i in range(1, 6):
-    # print(i)  # 1,2,3,4,5
-    pass
+# for i in range(1, 6):
+#     print(i)  # 1,2,3,4,5
 
 # Tip:
-# - while = when you don't know how many times
-# - for + range() = when you know how many times
+# - Use while when you don't know how many iterations are needed
+# - Use for + range() when you know (or can compute) how many iterations
+
+# ====================================
+# Examples runner (safe): only runs when executed directly
+# ====================================
+
+def _demo():
+    # Small runnable examples to try when you run `python notes.py`
+    print('Arithmetic: 2 + 3 =', 2 + 3)
+    print('Modulus: 10 % 3 =', 10 % 3)
+    print('Comparison: 1 == 2 ->', 1 == 2)
+    # While loop example:
+    number = 27
+    power_of_two = 1
+    while power_of_two <= number:
+        power_of_two *= 2
+    print('Small while example result (power_of_two):', power_of_two)
+    # For loop example:
+    print('For loop: numbers 1..5', [i for i in range(1, 6)])
+
+
+if __name__ == '__main__':
+    _demo()
