@@ -267,3 +267,42 @@ def _demo():
 
 if __name__ == '__main__':
     _demo()
+
+# ==============================
+# DAY 7 - 14 September 2026
+# ==============================
+
+# --- 18. Break and Continue ---
+# 1. continue = SKIP current iteration, go to next one
+# Use when you want to ignore one value but keep looping
+
+for i in range(3, 9):
+    if i == 5:
+        continue  # skip 5
+    print(i)
+# Output: 3, 4, 6, 7, 8
+
+# Example - skip even numbers
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i, "is odd")
+
+# 2. break = EXIT loop completely
+# Use when you found what you need and want to stop
+
+for i in range(10):
+    if i == 6:
+        break  # stop at 6
+    print(i)
+# Output: 0, 1, 2, 3, 4, 5
+
+# Example - stop when you find first number divisible by 7
+for i in range(1, 100):
+    if i % 7 == 0:
+        print(f"Found it: {i}")
+        break
+
+# SUMMARY:
+# continue -> skip this one, keep looping
+# break -> stop the loop forever
