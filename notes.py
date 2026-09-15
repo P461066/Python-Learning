@@ -1,6 +1,35 @@
 # Python Notes - My Learning Journey
 # Started: 08 September 2026
 
+# Table of Contents
+# - DAY 1 (08 Sep 2026)
+#   1. Variables
+#   2. Strings
+#   3. Booleans
+# - DAY 2 (09 Sep 2026)
+#   4. Arithmetic operators (+ - * / // % **)
+#   5. Augmented assignment (+=, -=, ...)
+#   6. Modulus operator (%)
+#   7. Comparison operators (==, !=, >, <, >=, <=)
+#   8. Logical operators (and, or, not)
+# - DAY 3 (10 Sep 2026)
+#   9. De Morgan's laws
+# - DAY 4 (11 Sep 2026)
+#   10. If / elif / else
+#   11. Nested ifs
+# - DAY 5 (12 Sep 2026)
+#   12. input(), Casting, String vs numeric addition
+# - DAY 6 (13 Sep 2026)
+#   16. Loops: while, for
+# - DAY 7 (14 Sep 2026)
+#   18. break and continue
+# - DAY 8 (15 Sep 2026)
+#   19. range() usage and examples
+# - DAY 9 (16 Sep 2026)
+#   20. Nested loops
+# - Examples runner
+#   Safe demo examples that run only when executing the file directly
+
 # ====================================
 # 📅 DAY 1 - 08 September 2026
 # ====================================
@@ -227,13 +256,13 @@ _example_le = (1 <= 2)   # True
 # A for loop is used to iterate over a sequence (like a list or range)
 
 # Syntax:
-# for i in range(start, end[, step]):
+# for i in range(start, stop[, step]):
 #     code
 
 # Range examples:
-# - range(end): starts from 0, goes up to (but not including) end
-# - range(start, end): goes from start to (but not including) end
-# - range(start, end, step): steps by step (step can be negative)
+# - range(stop): starts from 0, goes up to (but not including) stop
+# - range(start, stop): goes from start to (but not including) stop
+# - range(start, stop, step): steps by step (step can be negative)
 
 # Examples:
 # for i in range(5):
@@ -247,56 +276,28 @@ _example_le = (1 <= 2)   # True
 # - Use for + range() when you know (or can compute) how many iterations
 
 # ====================================
-# Examples runner (safe): only runs when executed directly
+# 📅 DAY 7 - 14 September 2026
 # ====================================
 
-def _demo():
-    # Small runnable examples to try when you run `python notes.py`
-    print('Arithmetic: 2 + 3 =', 2 + 3)
-    print('Modulus: 10 % 3 =', 10 % 3)
-    print('Comparison: 1 == 2 ->', 1 == 2)
-    # While loop example:
-    number = 27
-    power_of_two = 1
-    while power_of_two <= number:
-        power_of_two *= 2
-    print('Small while example result (power_of_two):', power_of_two)
-    # For loop example:
-    print('For loop: numbers 1..5', [i for i in range(1, 6)])
+# 18. BREAK and CONTINUE
+# continue -> skip the current iteration and continue with the next one
+# break    -> stop the loop completely
 
-
-if __name__ == '__main__':
-    _demo()
-
-# ==============================
-# DAY 7 - 14 September 2026
-# ==============================
-
-# --- 18. Break and Continue ---
-# 1. continue = SKIP current iteration, go to next one
-# Use when you want to ignore one value but keep looping
-
-# Example: skip the value 5 in a loop
+# Examples (commented so file is import-safe):
 # for i in range(3, 9):
 #     if i == 5:
 #         continue  # skip 5
-#     print(i)
-# Output: 3, 4, 6, 7, 8
+#     print(i)     # 3, 4, 6, 7, 8
 
-# Example - skip even numbers
 # for i in range(10):
 #     if i % 2 == 0:
 #         continue
 #     print(i, "is odd")
 
-# 2. break = EXIT loop completely
-# Use when you found what you need and want to stop
-
 # for i in range(10):
 #     if i == 6:
-#         break  # stop at 6
-#     print(i)
-# Output: 0, 1, 2, 3, 4, 5
+#         break
+#     print(i)     # 0, 1, 2, 3, 4, 5
 
 # Example - stop when you find first number divisible by 7
 # for i in range(1, 100):
@@ -306,10 +307,10 @@ if __name__ == '__main__':
 
 # SUMMARY:
 # continue -> skip this one, keep looping
-# break -> stop the loop
+# break    -> stop the loop
 
 # ====================================
-# DAY 8 - 15 September 2026
+# 📅 DAY 8 - 15 September 2026
 # ====================================
 
 # 19. range() - 3 ways to use it
@@ -320,7 +321,7 @@ if __name__ == '__main__':
 # Important notes:
 # - start is inclusive, stop is exclusive (stop value is not included)
 # - step can be positive (count up) or negative (count down)
-# - stop value is not included in the sequence
+# - to go backwards, step must be negative (e.g. -1, -2)
 
 # Examples (commented so file is import-safe):
 # # Counts from 0 to 4
@@ -345,5 +346,68 @@ if __name__ == '__main__':
 # - to go backwards, step must be negative (e.g. -1, -2)
 
 # ====================================
+# 📅 DAY 9 - 16 September 2026
+# ====================================
+
+# 20. NESTED LOOPS
+# Nested loops are loops inside other loops.
+
+# Syntax example:
+# for x in range(2):
+#     for y in range(2):
+#         print(x, y)
+#
+# Output:
+# 0 0
+# 0 1
+# 1 0
+# 1 1
+
+# How it works:
+# - The inner loop completes all iterations for each iteration of the outer loop
+# - Similar to how a clock's minute hand completes a full cycle for each hour
+# - Outer loop = hour, Inner loop = minute
+
+# Example breakdown:
+# for x in range(2):      # x = 0 first
+#     for y in range(2):  # y = 0, then 1
+#         print(x, y)     # prints 0 0, then 0 1
+#
+#     # then x = 1
+#     # y = 0, then 1 again
+#     # prints 1 0, then 1 1
+
+# Tip:
+# - Outer loop runs slower, inner loop runs faster ✅
+# - If outer is range(3) and inner is range(2), total prints = 3 * 2 = 6 times
+
+# ====================================
 # Examples runner (safe): only runs when executed directly
 # ====================================
+
+def _demo():
+    # Small runnable examples to try when you run `python notes.py`
+    print('Arithmetic: 2 + 3 =', 2 + 3)
+    print('Modulus: 10 % 3 =', 10 % 3)
+    print('Comparison: 1 == 2 ->', 1 == 2)
+
+    # While loop example:
+    number = 27
+    power_of_two = 1
+    while power_of_two <= number:
+        power_of_two *= 2
+    print('Small while example result (power_of_two):', power_of_two)
+
+    # Range examples:
+    print('range(5):', list(range(5)))
+    print('range(2,6):', list(range(2, 6)))
+    print('range(1,10,2):', list(range(1, 10, 2)))
+    print('range(10,0,-2):', list(range(10, 0, -2)))
+
+    # Nested loops example (demonstration):
+    pairs = [(x, y) for x in range(2) for y in range(2)]
+    print('Nested loop pairs (range(2), range(2)):', pairs)
+
+
+if __name__ == '__main__':
+    _demo()
