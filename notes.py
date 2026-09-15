@@ -276,33 +276,74 @@ if __name__ == '__main__':
 # 1. continue = SKIP current iteration, go to next one
 # Use when you want to ignore one value but keep looping
 
-for i in range(3, 9):
-    if i == 5:
-        continue  # skip 5
-    print(i)
+# Example: skip the value 5 in a loop
+# for i in range(3, 9):
+#     if i == 5:
+#         continue  # skip 5
+#     print(i)
 # Output: 3, 4, 6, 7, 8
 
 # Example - skip even numbers
-for i in range(10):
-    if i % 2 == 0:
-        continue
-    print(i, "is odd")
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     print(i, "is odd")
 
 # 2. break = EXIT loop completely
 # Use when you found what you need and want to stop
 
-for i in range(10):
-    if i == 6:
-        break  # stop at 6
-    print(i)
+# for i in range(10):
+#     if i == 6:
+#         break  # stop at 6
+#     print(i)
 # Output: 0, 1, 2, 3, 4, 5
 
 # Example - stop when you find first number divisible by 7
-for i in range(1, 100):
-    if i % 7 == 0:
-        print(f"Found it: {i}")
-        break
+# for i in range(1, 100):
+#     if i % 7 == 0:
+#         print(f"Found it: {i}")
+#         break
 
 # SUMMARY:
 # continue -> skip this one, keep looping
-# break -> stop the loop forever
+# break -> stop the loop
+
+# ====================================
+# DAY 8 - 15 September 2026
+# ====================================
+
+# 19. range() - 3 ways to use it
+# 1. range(stop): starts from 0, goes up to stop (stop is NOT included), step == 1
+# 2. range(start, stop): starts at start (inclusive), goes up to stop (exclusive), step == 1
+# 3. range(start, stop, step): starts at start, goes up to stop (exclusive), steps by step
+
+# Important notes:
+# - start is inclusive, stop is exclusive (stop value is not included)
+# - step can be positive (count up) or negative (count down)
+# - stop value is not included in the sequence
+
+# Examples (commented so file is import-safe):
+# # Counts from 0 to 4
+# for i in range(5):
+#     print(i)
+
+# # Counts from 2 to 5
+# for i in range(2, 6):
+#     print(i)
+
+# # Counts odd numbers from 1 to 9
+# for i in range(1, 10, 2):
+#     print(i)
+
+# # Counts down by 2s from 10 down to 2
+# for i in range(10, 0, -2):
+#     print(i)
+
+# Tip:
+# - start is inclusive, stop is exclusive
+# - step can be positive or negative
+# - to go backwards, step must be negative (e.g. -1, -2)
+
+# ====================================
+# Examples runner (safe): only runs when executed directly
+# ====================================
