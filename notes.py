@@ -1,362 +1,289 @@
 # Python Notes - My Learning Journey
 # Started: 08 September 2026
 
-# Table of Contents
-# - DAY 1 (08 Sep 2026)
-#   1. Variables
-#   2. Strings
-#   3. Booleans
-# - DAY 2 (09 Sep 2026)
-#   4. Arithmetic operators (+ - * / // % **)
-#   5. Augmented assignment (+=, -=, ...)
-#   6. Modulus operator (%)
-#   7. Comparison operators (==, !=, >, <, >=, <=)
-#   8. Logical operators (and, or, not)
-# - DAY 3 (10 Sep 2026)
-#   9. De Morgan's laws
-# - DAY 4 (11 Sep 2026)
-#   10. If / elif / else
-#   11. Nested ifs
-# - DAY 5 (12 Sep 2026)
-#   12. input(), Casting, String vs numeric addition
-# - DAY 6 (13 Sep 2026)
-#   16. Loops: while, for
-# - DAY 7 (14 Sep 2026)
-#   18. break and continue
-# - DAY 8 (15 Sep 2026)
-#   19. range() usage and examples
-# - DAY 9 (16 Sep 2026)
-#   20. Nested loops
-# - Examples runner
-#   Safe demo examples that run only when executing the file directly
+# ====================================
+# TABLE OF CONTENTS
+# ====================================
+# DAY 1 - Variables, Strings, Booleans
+# DAY 2 - Arithmetic & Comparison Operators
+# DAY 3 - Logical Operators & De Morgan's Laws
+# DAY 4 - If / Elif / Else
+# DAY 5 - Input & Type Conversion
+# DAY 6 - Loops (While / For)
+# DAY 7 - Break & Continue
+# DAY 8 - range()
+# DAY 9 - Nested Loops
+# DAY 10 - Functions (def)
+# CURRENT TOPIC - Functions / Reusable Code
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
 # ====================================
 
-# 1. VARIABLES
-# A variable is a container that holds data values.
-# It is used to store, manipulate, and display information.
+# --- 1. VARIABLES ---
+# A variable is a container that stores data.
 # Python automatically detects the data type.
 
-# Examples:
-# variable_name = value
 age = 20
 score = 2100
 
-# Tip: Spaces in Python
-# Variable names CANNOT use spaces. Use underscore (_) instead (snake_case).
-# Examples:
-# my score = 100  ❌ Wrong
-# my_score = 10000 ✅ Correct
+# Tip:
+# Variable names cannot contain spaces.
+# Use snake_case instead.
+# Example:
+# my score = 100   ❌ invalid
+# my_score = 1000  ✅ valid
 
-# 2. STRINGS (str)
-# A string stores text in Python.
+# --- 2. STRING (str) ---
+# A string stores text.
 text1 = 'This is a sentence'
 text2 = "This is also a sentence"
 
 # Tip:
-# To create a string, use single ('') or double ("") quotes around the text.
+# Use single quotes or double quotes around text.
 
-# 3. BOOLEANS (bool)
-# A boolean is a data type with only two values: True or False.
+# --- 3. BOOLEAN (bool) ---
+# A boolean only has two values: True or False.
 variable_true = True
 variable_false = False
 
-# Tip: Case sensitive
-# true  ❌ Wrong
-# True  ✅ Correct
+# Tip:
+# Python is case-sensitive.
+# true  ❌ wrong
+# True  ✅ correct
 
 # ====================================
 # 📅 DAY 2 - 09 September 2026
 # ====================================
 
-# 4. ARITHMETIC OPERATORS
-# +  addition
-# -  subtraction
-# *  multiplication
-# /  division (float division in Python 3)
-# // integer (floor) division
-# %  modulus (remainder)
-# ** exponentiation
+# --- 4. ARITHMETIC OPERATORS ---
+# + addition
+# - subtraction
+# * multiplication
+# / division
+# % modulus (remainder)
+# ** exponent
 
 # Example:
 a = 2
 b = 3
-c = a + b  # c == 5
+c = a + b
+print(c)  # 5
 
-# 5. AUGMENTED ASSIGNMENT (in-place) OPERATORS
-# Instead of writing a = a + 3 you can write a += 3
+# --- 5. AUGMENTED ASSIGNMENT ---
+# Instead of writing a = a + 3, we can write a += 3
 
-# Example sequence (independent examples):
-a = 10
-# a += 3  -> a becomes 13
-# a -= 3  -> a becomes 7
-# a *= 3  -> a becomes 30
-# a /= 3  -> a becomes 3.333...
-# a %= 3  -> a becomes 1
+x = 10
+x += 3    # x = 13
+x -= 2    # x = 11
+x *= 4    # x = 44
+x /= 2    # x = 22.0
+x %= 5    # x = 2.0
 
-# 6. MODULUS OPERATOR (%) - gives remainder of a division
-# Example:
-# results = 10 % 3  # 10 / 3 => remainder 1, so results == 1
+# --- 6. MODULUS OPERATOR (%) ---
+# % returns the remainder of division.
+remainder = 10 % 3   # 10 / 3 = 3 remainder 1
 
-# Common use: check if number is even or odd
-# Even: number % 2 == 0
-# Odd:  number % 2 == 1
+# Common use:
+# number % 2 == 0 -> even number
+# number % 2 != 0 -> odd number
 
-# 7. COMPARISON OPERATORS
-# They compare two values and return True or False (Boolean).
-# ==  equal to
-# !=  not equal to
-# >   greater than
-# <   less than
-# >=  greater than or equal to
-# <=  less than or equal to
+# --- 7. COMPARISON OPERATORS ---
+# They compare two values and return True or False.
+# == equal to
+# != not equal to
+# > greater than
+# < less than
+# >= greater than or equal to
+# <= less than or equal to
 
-# Examples (read-only; these show expected boolean results):
-_example_eq = (1 == 2)   # False
-_example_eq2 = (1 == 1)  # True
-_example_ne = (1 != 2)   # True
-_example_gt = (1 > 2)    # False
-_example_lt = (1 < 2)    # True
-_example_ge = (1 >= 2)   # False
-_example_le = (1 <= 2)   # True
+print(1 == 2)  # False
+print(1 == 1)  # True
+print(1 != 2)  # True
+print(1 > 2)   # False
+print(1 < 2)   # True
+print(1 >= 2)  # False
+print(1 <= 2)  # True
 
-# 8. LOGICAL OPERATORS
-# and -> True if both operands are True
-# or  -> True if at least one operand is True
-# not -> negates the boolean value
+# --- 8. LOGICAL OPERATORS ---
+# and -> True if both are True
+# or  -> True if at least one is True
+# not -> reverses the result
 
-# Example (conceptual):
-# (a > b) and (b < c)
-# (a > b) or (b < c)
-# not (a > b)
+result1 = (13 > 12 and 12 < 13)   # True
+result2 = (13 > 12 or 13 < 12)    # True
+result3 = not (13 < 12)           # True
 
 # ====================================
 # 📅 DAY 3 - 10 September 2026
 # ====================================
 
-# 9. DE MORGAN'S LAWS
+# --- 9. DE MORGAN'S LAWS ---
 # not (A and B) == (not A) or (not B)
 # not (A or B)  == (not A) and (not B)
-# When you distribute not, flip and <-> or
 
-# Example (conceptual):
-# not (x > 0 and x < 10)  <==>  (x <= 0) or (x >= 10)
+# Example 1:
+number = 15
+result = not (number >= 1 and number <= 10)
+# This is the same as: number < 1 or number > 10
+print(result)  # True
+
+# Example 2:
+is_student = False
+is_employed = False
+result2 = not (is_student or is_employed)
+print(result2)  # True
 
 # ====================================
 # 📅 DAY 4 - 11 September 2026
 # ====================================
 
-# 10. IF STATEMENTS
-# Conditional execution:
+# --- 10. IF STATEMENTS ---
+# An if statement runs code only when a condition is True.
+
+# Syntax:
 # if condition:
-#     indented code runs only if condition is True
-
-# Tips for if / elif / else:
-# - Use a colon (:) after the condition
-# - Indent the block (4 spaces recommended)
-# - You can have multiple elifs; else is optional
-
-# Example:
-# age = 20
-# if age > 18:
-#     status = 'adult'
+#     code here
+# elif another_condition:
+#     code here
 # else:
-#     status = 'child'
+#     code here
 
-# Example with elif / else:
-# score = 75
-# if score >= 90:
-#     grade = 'A'
-# elif score >= 50:
-#     grade = 'B'
-# else:
-#     grade = 'C'
+age = 20
+if age > 18:
+    status = "Adult"
+else:
+    status = "Child"
+print(status)  # Adult
 
-# 11. NESTED IF / ELIF / ELSE
-# You can put an if inside another if for hierarchical decisions.
-# Keep nesting depth reasonable for readability.
+# Example with elif:
+score = 75
+if score >= 90:
+    grade = "A"
+elif score >= 50:
+    grade = "B"
+else:
+    grade = "C"
+print(grade)  # B
 
-# Example:
-# age = 20
-# has_license = True
-# if age > 18:
-#     if has_license:
-#         print('You can drive')
-#     else:
-#         print('Get a license first')
-# else:
-#     print('Too young to drive')
+# --- 11. NESTED IF STATEMENTS ---
+# You can put if statements inside other if statements.
+
+age = 20
+has_license = True
+
+if age > 18:
+    if has_license:
+        print("You can drive")
+    else:
+        print("Get a license first")
+else:
+    print("Too young to drive")
 
 # ====================================
 # 📅 DAY 5 - 12 September 2026
 # ====================================
 
-# 12. input() FUNCTION
-# Use input() to get text from a user.
-# Always returns a string.
+# --- 12. INPUT() ---
+# input() gets text from the user.
+# It always returns a string.
 
-# Example (do not call during automated runs):
-# name = input('Enter your name: ')
-# print('Hello, ' + name)
-
-# 13. CASTING (CONVERSION)
-# Convert between types when needed.
-# int()   -> integer (whole number)
-# float() -> floating point (decimal)
-# str()   -> string
-# bool()  -> boolean (Note: bool(non-empty-string) is True)
-
-# Examples:
-# age = int(input('Enter your age: '))   # "20" -> 20
-# price = float(input('Enter price: '))  # "9.99" -> 9.99
-
-# 14. IMPORTANT DIFFERENCE
-# Adding strings concatenates them, while adding numbers performs arithmetic
-# "5" + "5" == "55"  # string concatenation
-# 5 + 5 == 10            # numeric addition
-
-# So you MUST cast when reading numbers from input:
-# num1 = int(input())
-# num2 = int(input())
-# print(num1 + num2)  # outputs 10 if user enters 5 and 5
-
-# 15. MULTIPLE INPUTS
-# Ask for input multiple times if you need multiple values.
 # Example:
-# first_name = input('First name: ')
-# last_name = input('Last name: ')
-# print(first_name + ' ' + last_name)
+# name = input("Enter your name: ")
+# print("Hello " + name)
+
+# --- 13. TYPE CONVERSION ---
+# int()  -> integer
+# float() -> decimal number
+# str() -> string
+# bool() -> boolean
+
+# Example:
+# age = int(input("Enter your age: "))
+# price = float(input("Enter price: "))
+
+# --- 14. IMPORTANT TIP ---
+# "5" + "5" = "55"  # string concatenation
+# 5 + 5 = 10        # numeric addition
+
+# So if you want to add numbers from user input, convert them first.
 
 # ====================================
 # 📅 DAY 6 - 13 September 2026
 # ====================================
 
-# 16. LOOPS: WHILE
-# A while loop runs as long as a condition is True.
-# Use a while loop when you don't know beforehand how many times it will run.
+# --- 15. WHILE LOOP ---
+# A while loop runs while a condition is True.
 
 # Syntax:
 # while condition:
 #     code
 
 # Example:
-# number = 27
-# power_of_two = 1
-# while power_of_two <= number:
-#     power_of_two *= 2  # update to avoid infinite loop
-# # After the loop, power_of_two is 32
+count = 1
+while count <= 5:
+    print(count)
+    count += 1
 
-# Important points:
-# - Ensure you update the variable used in the condition (or use a break) to avoid infinite loops
-# - You can use while True: with a break to create a loop that stops on a condition
+# --- 16. FOR LOOP ---
+# A for loop is used to repeat code over a sequence.
 
-# 17. LOOPS: FOR
-# A for loop is used to iterate over a sequence (like a list or range)
-
-# Syntax:
-# for i in range(start, stop[, step]):
-#     code
-
-# Range examples:
-# - range(stop): starts from 0, goes up to (but not including) stop
-# - range(start, stop): goes from start to (but not including) stop
-# - range(start, stop, step): steps by step (step can be negative)
-
-# Examples:
-# for i in range(5):
-#     print(i)  # 0,1,2,3,4
-
-# for i in range(1, 6):
-#     print(i)  # 1,2,3,4,5
-
-# Tip:
-# - Use while when you don't know how many iterations are needed
-# - Use for + range() when you know (or can compute) how many iterations
+# Example:
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
 
 # ====================================
 # 📅 DAY 7 - 14 September 2026
 # ====================================
 
-# 18. BREAK and CONTINUE
-# continue -> skip the current iteration and continue with the next one
-# break    -> stop the loop completely
+# --- 17. BREAK AND CONTINUE ---
+# continue -> skip the current iteration
+# break -> stop the loop completely
 
-# Examples (commented so file is import-safe):
-# for i in range(3, 9):
-#     if i == 5:
-#         continue  # skip 5
-#     print(i)     # 3, 4, 6, 7, 8
+# Continue example:
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)  # 1, 3, 5, 7, 9
 
-# for i in range(10):
-#     if i % 2 == 0:
-#         continue
-#     print(i, "is odd")
-
-# for i in range(10):
-#     if i == 6:
-#         break
-#     print(i)     # 0, 1, 2, 3, 4, 5
-
-# Example - stop when you find first number divisible by 7
-# for i in range(1, 100):
-#     if i % 7 == 0:
-#         print(f"Found it: {i}")
-#         break
-
-# SUMMARY:
-# continue -> skip this one, keep looping
-# break    -> stop the loop
+# Break example:
+for i in range(10):
+    if i == 6:
+        break
+    print(i)  # 0, 1, 2, 3, 4, 5
 
 # ====================================
 # 📅 DAY 8 - 15 September 2026
 # ====================================
 
-# 19. range() - 3 ways to use it
-# 1. range(stop): starts from 0, goes up to stop (stop is NOT included), step == 1
-# 2. range(start, stop): starts at start (inclusive), goes up to stop (exclusive), step == 1
-# 3. range(start, stop, step): starts at start, goes up to stop (exclusive), steps by step
+# --- 18. RANGE() ---
+# range(stop) -> starts at 0 and goes up to stop - 1
+# range(start, stop) -> starts at start and goes to stop - 1
+# range(start, stop, step) -> use custom step size
 
-# Important notes:
-# - start is inclusive, stop is exclusive (stop value is not included)
-# - step can be positive (count up) or negative (count down)
-# - to go backwards, step must be negative (e.g. -1, -2)
+for i in range(5):
+    print(i)
 
-# Examples (commented so file is import-safe):
-# # Counts from 0 to 4
-# for i in range(5):
-#     print(i)
+for i in range(2, 6):
+    print(i)
 
-# # Counts from 2 to 5
-# for i in range(2, 6):
-#     print(i)
+for i in range(1, 10, 2):
+    print(i)
 
-# # Counts odd numbers from 1 to 9
-# for i in range(1, 10, 2):
-#     print(i)
-
-# # Counts down by 2s from 10 down to 2
-# for i in range(10, 0, -2):
-#     print(i)
-
-# Tip:
-# - start is inclusive, stop is exclusive
-# - step can be positive or negative
-# - to go backwards, step must be negative (e.g. -1, -2)
+for i in range(10, 0, -2):
+    print(i)
 
 # ====================================
 # 📅 DAY 9 - 16 September 2026
 # ====================================
 
-# 20. NESTED LOOPS
-# Nested loops are loops inside other loops.
+# --- 19. NESTED LOOPS ---
+# A nested loop is a loop inside another loop.
 
-# Syntax example:
-# for x in range(2):
-#     for y in range(2):
-#         print(x, y)
-#
+for x in range(2):
+    for y in range(2):
+        print(x, y)
+
 # Output:
 # 0 0
 # 0 1
@@ -364,91 +291,100 @@ _example_le = (1 <= 2)   # True
 # 1 1
 
 # How it works:
-# - The inner loop completes all iterations for each iteration of the outer loop
-# - Similar to how a clock's minute hand completes a full cycle for each hour
-# - Outer loop = hour, Inner loop = minute
-
-# Example breakdown:
-# for x in range(2):      # x = 0 first
-#     for y in range(2):  # y = 0, then 1
-#         print(x, y)     # prints 0 0, then 0 1
-#
-#     # then x = 1
-#     # y = 0, then 1 again
-#     # prints 1 0, then 1 1
-
-# Tip:
-# - Outer loop runs slower, inner loop runs faster ✅
-# - If outer is range(3) and inner is range(2), total prints = 3 * 2 = 6 times
+# The outer loop runs first.
+# For each outer loop value, the inner loop runs completely.
+# So the inner loop is repeated many times.
 
 # ====================================
-# Examples runner (safe): only runs when executed directly
+# 📅 DAY 10 - 17 September 2026
 # ====================================
 
-# ====================================
-# DAY 10 - 17 September 2026
-# ====================================
+# --- 20. FUNCTIONS (def) ---
+# A function is a reusable block of code.
+# It helps us organize code and avoid repetition.
 
-# 21. FUNCTIONS IN PYTH0N 
-# A function is a block of code that runs only when you call it
-# Used to avoid repeating same code
+# Syntax:
+# def function_name(parameters):
+#     code to run
+#     return result (optional)
 
-# Sytanx example:
-# Function declaration
-def funtion_name():
-    #function body(indented)
-    code_here
+# Example 1: simple function
 
-# Function call
-function_name()
-
-# Function Arguments 
-# Arguments are values passed into a function when calling it
-
-def function_name(arg1,arg2,...)
-    # function code
-function _name (value1,value2,....)
- # Examples 
 def greet(name):
-    print(f"Hello{name}")
+    print(f"Hello {name}")
 
-greet("Pablo") # Hello Pablo
+# Call the function
+greet("Pablo")
 
-def add(a,b):
-    print(a+b)
+# Example 2: function that returns a value
 
-add (2,3) # 5
+def add(a, b):
+    return a + b
 
-# Important 
-# -Number of arguments must match number of values 
-# -Passing wrong number will cause program to fail 
-# -def = defining,call using 
+result = add(5, 7)
+print(result)  # 12
 
-# Tip 
-# Think of function like a machine: arg = input you put in,call =pressing the start button 
+# Example 3: function with no parameters
+
+def say_hello():
+    print("Hello world")
+
+say_hello()
+
+# Important points:
+# - def starts a function definition
+# - function_name should be descriptive
+# - parameters are values passed into the function
+# - return sends a value back to the caller
+# - A function is called by writing its name followed by parentheses
+
+# Real-life analogy:
+# A function is like a machine.
+# Input -> process -> output
+
+# Example:
+# def multiply(num1, num2):
+#     return num1 * num2
+# print(multiply(3, 4))  # 12
+
+# ====================================
+# CURRENT TOPIC: FUNCTIONS / REUSABLE CODE
+# ====================================
+
+# When learning functions, remember:
+# 1. A function helps organize code
+# 2. It makes code reusable
+# 3. It can take parameters
+# 4. It can return a value
+# 5. It makes programs easier to read
+
+# Practice idea:
+# Write a function that calculates the area of a rectangle.
+# Write a function that checks if a number is even.
+# Write a function that adds two numbers.
+
+# Example practice:
+
+def is_even(number):
+    return number % 2 == 0
+
+print(is_even(8))  # True
+print(is_even(9))  # False
+
+# ====================================
+# SAFE DEMO RUNNER
+# ====================================
+
 def _demo():
-    # Small runnable examples to try when you run `python notes.py`
-    print('Arithmetic: 2 + 3 =', 2 + 3)
-    print('Modulus: 10 % 3 =', 10 % 3)
-    print('Comparison: 1 == 2 ->', 1 == 2)
+    print("Arithmetic example:", 2 + 3)
+    print("Modulus example:", 10 % 3)
+    print("Range example:", list(range(1, 10, 2)))
 
-    # While loop example:
-    number = 27
-    power_of_two = 1
-    while power_of_two <= number:
-        power_of_two *= 2
-    print('Small while example result (power_of_two):', power_of_two)
+    def greet(name):
+        return f"Hello {name}"
 
-    # Range examples:
-    print('range(5):', list(range(5)))
-    print('range(2,6):', list(range(2, 6)))
-    print('range(1,10,2):', list(range(1, 10, 2)))
-    print('range(10,0,-2):', list(range(10, 0, -2)))
-
-    # Nested loops example (demonstration):
-    pairs = [(x, y) for x in range(2) for y in range(2)]
-    print('Nested loop pairs (range(2), range(2)):', pairs)
+    print("Function demo:", greet("Pablo"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     _demo()
