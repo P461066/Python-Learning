@@ -385,6 +385,47 @@ _example_le = (1 <= 2)   # True
 # Examples runner (safe): only runs when executed directly
 # ====================================
 
+# ====================================
+# DAY 10 - 17 September 2026
+# ====================================
+
+# 21. FUNCTIONS IN PYTH0N 
+# A function is a block of code that runs only when you call it
+# Used to avoid repeating same code
+
+# Sytanx example:
+# Function declaration
+def funtion_name():
+    #function body(indented)
+    code_here
+
+# Function call
+function_name()
+
+# Function Arguments 
+# Arguments are values passed into a function when calling it
+
+def function_name(arg1,arg2,...)
+    # function code
+function _name (value1,value2,....)
+ # Examples 
+def greet(name):
+    print(f"Hello{name}")
+
+greet("Pablo") # Hello Pablo
+
+def add(a,b):
+    print(a+b)
+
+add (2,3) # 5
+
+# Important 
+# -Number of arguments must match number of values 
+# -Passing wrong number will cause program to fail 
+# -def = defining,call using 
+
+# Tip 
+# Think of function like a machine: arg = input you put in,call =pressing the start button 
 def _demo():
     # Small runnable examples to try when you run `python notes.py`
     print('Arithmetic: 2 + 3 =', 2 + 3)
