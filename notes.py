@@ -372,6 +372,53 @@ print(is_even(8))  # True
 print(is_even(9))  # False
 
 # ====================================
+# Day 11 - 18 September 2026
+# ====================================
+
+# --- 21. Return Statement ---
+# The return statement specifies the output of a function
+# It sends a value back to where the function was called
+
+# Syntax:
+# def funtion_name():
+#     return 100
+
+# To use the returned value:
+# number = function_name()
+# number now holds 100
+
+# Examples
+def add(a,b):
+    return a + b
+
+result = add(2,3)
+print(result) #5
+
+def is_even(n):
+    return n % 2 == 0
+
+print(is_even(4)) # True 
+
+# print vs return 
+# print() =  just shows it on screen,you can't use it later 
+# return = gives it back so you can save it in a variable and use it 
+
+def with_print():
+    print(10)
+
+def is_even():
+    return 10
+
+x = with_print() # x = None,nothing saved
+y = with_return() # y = 10,you can use  later 
+
+# Tip:
+# Return ends the funtion immediately - nothing after return runs 
+# If no return,funtion returns None by default
+
+
+
+# ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
