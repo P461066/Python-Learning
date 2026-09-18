@@ -14,6 +14,7 @@
 # DAY 8 - range()
 # DAY 9 - Nested Loops
 # DAY 10 - Functions (def)
+# DAY 11 - Return Statement
 # CURRENT TOPIC - Functions / Reusable Code
 
 # ====================================
@@ -348,6 +349,53 @@ say_hello()
 # print(multiply(3, 4))  # 12
 
 # ====================================
+# 📅 DAY 11 - 18 September 2026
+# ====================================
+
+# --- 21. RETURN STATEMENT ---
+# The return statement sends a value back to the caller.
+# It is used to get output from a function.
+
+# Syntax:
+# def function_name():
+#     return value
+
+# Example:
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(2, 3)
+print(result)  # 5
+
+# Another example:
+def is_even(n):
+    return n % 2 == 0
+
+print(is_even(4))  # True
+print(is_even(7))  # False
+
+# print() vs return
+# print() = shows text on the screen, but you cannot use it later
+# return = gives the value back so you can store it in a variable
+
+# Example:
+def with_print():
+    print(10)
+
+# This does not return a useful value:
+def with_return():
+    return 10
+
+x = with_print()   # x = None
+y = with_return()  # y = 10
+print(x)
+print(y)
+
+# Tip:
+# Return ends the function immediately.
+# If no return is used, the function returns None by default.
+
+# ====================================
 # CURRENT TOPIC: FUNCTIONS / REUSABLE CODE
 # ====================================
 
@@ -358,10 +406,10 @@ say_hello()
 # 4. It can return a value
 # 5. It makes programs easier to read
 
-# Practice idea:
-# Write a function that calculates the area of a rectangle.
-# Write a function that checks if a number is even.
-# Write a function that adds two numbers.
+# Practice ideas:
+# - Write a function that calculates the area of a rectangle.
+# - Write a function that checks if a number is even.
+# - Write a function that adds two numbers.
 
 # Example practice:
 
@@ -370,53 +418,6 @@ def is_even(number):
 
 print(is_even(8))  # True
 print(is_even(9))  # False
-
-# ====================================
-# Day 11 - 18 September 2026
-# ====================================
-
-# --- 21. Return Statement ---
-# The return statement specifies the output of a function
-# It sends a value back to where the function was called
-
-# Syntax:
-# def funtion_name():
-#     return 100
-
-# To use the returned value:
-# number = function_name()
-# number now holds 100
-
-# Examples
-def add(a,b):
-    return a + b
-
-result = add(2,3)
-print(result) #5
-
-def is_even(n):
-    return n % 2 == 0
-
-print(is_even(4)) # True 
-
-# print vs return 
-# print() =  just shows it on screen,you can't use it later 
-# return = gives it back so you can save it in a variable and use it 
-
-def with_print():
-    print(10)
-
-def is_even():
-    return 10
-
-x = with_print() # x = None,nothing saved
-y = with_return() # y = 10,you can use  later 
-
-# Tip:
-# Return ends the funtion immediately - nothing after return runs 
-# If no return,funtion returns None by default
-
-
 
 # ====================================
 # SAFE DEMO RUNNER
