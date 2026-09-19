@@ -396,10 +396,10 @@ print(y)
 # If no return is used, the function returns None by default.
 
 # ====================================
-# TOPIC 22 - DEFAULT PARAMETERS AND PARAMETER ORDER
+# DAY 12 - 19 September 2026
 # ====================================
 
-# Required parameters must come before default parameters.
+# --- 22.Required parameters must come before default parameters.---
 
 # Correct:
 def greet(name, greeting="Hello"):
