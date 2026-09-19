@@ -15,6 +15,7 @@
 # DAY 9 - Nested Loops
 # DAY 10 - Functions (def)
 # DAY 11 - Return Statement
+# DAY 12 - Default Parameters
 # CURRENT TOPIC - Functions / Reusable Code
 
 # ====================================
@@ -106,6 +107,10 @@ print(1 < 2)   # True
 print(1 >= 2)  # False
 print(1 <= 2)  # True
 
+# ====================================
+# 📅 DAY 3 - 10 September 2026
+# ====================================
+
 # --- 8. LOGICAL OPERATORS ---
 # and -> True if both are True
 # or  -> True if at least one is True
@@ -114,10 +119,6 @@ print(1 <= 2)  # True
 result1 = (13 > 12 and 12 < 13)   # True
 result2 = (13 > 12 or 13 < 12)    # True
 result3 = not (13 < 12)           # True
-
-# ====================================
-# 📅 DAY 3 - 10 September 2026
-# ====================================
 
 # --- 9. DE MORGAN'S LAWS ---
 # not (A and B) == (not A) or (not B)
@@ -396,10 +397,11 @@ print(y)
 # If no return is used, the function returns None by default.
 
 # ====================================
-# DAY 12 - 19 September 2026
+# 📅 DAY 12 - 19 September 2026
 # ====================================
 
-# --- 22.Required parameters must come before default parameters.---
+# --- 22. DEFAULT PARAMETERS ---
+# Default parameters allow a function to use a predefined value when no argument is passed.
 
 # Correct:
 def greet(name, greeting="Hello"):
@@ -455,7 +457,6 @@ print(introduce("Pablo", 20))   # Uses the provided age: 20
 # - Write a function that adds two numbers.
 
 # Example practice:
-
 def is_even(number):
     return number % 2 == 0
 
