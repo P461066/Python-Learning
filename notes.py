@@ -464,6 +464,36 @@ print(is_even(8))  # True
 print(is_even(9))  # False
 
 # ====================================
+# DAY 13 - 20 September 2026
+# ====================================
+
+# --- 23.List ---
+# Created using square brackets []
+# Iteams separated by commas 
+# Can contain different data types
+
+# Sytanx:
+# my_list = [1,2,"three",True]
+
+# Getting list length
+length = len(my_list)
+print(length) # 4
+
+# Examples
+fruits = ["apple","banana","orange"]
+numbers = [10,20,30,40]
+mixed = [1 ,"hello",True,3.6]
+
+# Empty list 
+empty = []
+empty2 = list()
+
+# Tip 
+# List can grow or shrink
+# len() counts how many items inside 
+# index starts at 0:my_list[0] is first item
+
+# ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
