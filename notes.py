@@ -16,6 +16,7 @@
 # DAY 10 - Functions (def)
 # DAY 11 - Return Statement
 # DAY 12 - Default Parameters
+# DAY 13 - Lists
 # CURRENT TOPIC - Functions / Reusable Code
 
 # ====================================
@@ -441,6 +442,45 @@ print(introduce("Pablo", 20))   # Uses the provided age: 20
 # - Required parameters must be written before default parameters.
 
 # ====================================
+# 📅 DAY 13 - 20 September 2026
+# ====================================
+
+# --- 23. LISTS ---
+# A list is a collection of values stored in square brackets [].
+# Lists can hold different data types.
+# Lists are ordered, and each item has an index.
+
+# Syntax:
+# my_list = [1, 2, "three", True]
+
+# Example:
+fruits = ["apple", "banana", "orange"]
+numbers = [10, 20, 30, 40]
+mixed = [1, "hello", True, 3.6]
+
+# Empty list:
+empty_list = []
+empty_list2 = list()
+
+# Accessing values by index:
+print(fruits[0])  # apple
+print(fruits[1])  # banana
+
+# Getting the length of a list:
+my_list = [1, 2, "three", True]
+length = len(my_list)
+print(length)  # 4
+
+# Important notes:
+# - Lists can grow or shrink.
+# - len() counts the number of items in the list.
+# - Indexing starts at 0.
+# - my_list[0] is the first item.
+
+# Example with mixed types:
+print(mixed)  # [1, 'hello', True, 3.6]
+
+# ====================================
 # CURRENT TOPIC: FUNCTIONS / REUSABLE CODE
 # ====================================
 
@@ -462,36 +502,6 @@ def is_even(number):
 
 print(is_even(8))  # True
 print(is_even(9))  # False
-
-# ====================================
-# DAY 13 - 20 September 2026
-# ====================================
-
-# --- 23.List ---
-# Created using square brackets []
-# Iteams separated by commas 
-# Can contain different data types
-
-# Sytanx:
-# my_list = [1,2,"three",True]
-
-# Getting list length
-length = len(my_list)
-print(length) # 4
-
-# Examples
-fruits = ["apple","banana","orange"]
-numbers = [10,20,30,40]
-mixed = [1 ,"hello",True,3.6]
-
-# Empty list 
-empty = []
-empty2 = list()
-
-# Tip 
-# List can grow or shrink
-# len() counts how many items inside 
-# index starts at 0:my_list[0] is first item
 
 # ====================================
 # SAFE DEMO RUNNER
