@@ -481,29 +481,6 @@ print(length)  # 4
 print(mixed)  # [1, 'hello', True, 3.6]
 
 # ====================================
-# CURRENT TOPIC: FUNCTIONS / REUSABLE CODE
-# ====================================
-
-# When learning functions, remember:
-# 1. A function helps organize code
-# 2. It makes code reusable
-# 3. It can take parameters
-# 4. It can return a value
-# 5. It makes programs easier to read
-
-# Practice ideas:
-# - Write a function that calculates the area of a rectangle.
-# - Write a function that checks if a number is even.
-# - Write a function that adds two numbers.
-
-# Example practice:
-def is_even(number):
-    return number % 2 == 0
-
-print(is_even(8))  # True
-print(is_even(9))  # False
-
-# ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
