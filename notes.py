@@ -18,6 +18,7 @@
 # DAY 12 - Default Parameters
 # DAY 13 - Lists: Basics
 # DAY 14 - Lists: Accessing, Modifying & Looping
+# DAY 15 - Lists: Methods
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -349,6 +350,48 @@ print(len(fruits))  # 3
 # - len(list) returns the number of items.
 # - Loop directly through values when indexes are unnecessary.
 # - Use enumerate() when you need both indexes and values.
+
+# ====================================
+# 📅 DAY 15 - 22 September 2026
+# ====================================
+
+# --- 27. BASIC LIST METHODS ---
+# These are common built-in methods for lists.
+
+# append(element): adds an element to the end of the list
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)  # [1, 2, 3, 4]
+
+# clear(): removes all elements from the list
+numbers.clear()
+print(numbers)  # []
+
+# pop(index): removes and returns the element at the specified index
+numbers = [10, 20, 30]
+last_item = numbers.pop()
+print(last_item)  # 30
+print(numbers)    # [10, 20]
+
+# reverse(): reverses the order of the list
+letters = ["a", "b", "c"]
+letters.reverse()
+print(letters)  # ['c', 'b', 'a']
+
+# sort(): sorts the list in ascending order
+scores = [7, 3, 9, 1]
+scores.sort()
+print(scores)  # [1, 3, 7, 9]
+
+# ====================================
+# DAY 15 SUMMARY
+# ====================================
+
+# - append() adds a value to the end of a list.
+# - clear() removes every item from the list.
+# - pop() removes and returns an item by index.
+# - reverse() flips the list order.
+# - sort() arranges the list in ascending order.
 
 # ====================================
 # SAFE DEMO RUNNER
