@@ -394,6 +394,32 @@ print(scores)  # [1, 3, 7, 9]
 # - sort() arranges the list in ascending order.
 
 # ====================================
+# DAY 16 - 23 September 2026
+# ====================================
+
+# --- 26. TUPLE ---
+# Immutable (read only) data structure. Can't change after creation 
+# Created using paranthese ()
+# Access elements using indexing,including negative indexing 
+
+# Sytanx (Creating a Tuple)
+coordinates = (67, 678)
+
+# Accessing elements
+x = coordinates[0] #67
+y = coordinates[1] #678
+
+# LIST vs TUPLE 
+my_list = [1, 2, 3] # Mutable(can change)
+my_tuple = (1, 2, 3) # Immuatable(cannot change)
+
+my_list[0] = 10 #it changes 1 into 10 
+#my_tuple[0] = 10 it doesnt work because you cannot change values in Tuple
+
+# TIP
+# Use List when you need to change it 
+# Use Tuple when you want it to stay fixed
+# ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
