@@ -419,6 +419,20 @@ my_list[0] = 10 #it changes 1 into 10
 # TIP
 # Use List when you need to change it 
 # Use Tuple when you want it to stay fixed
+
+# --- 24.Iterate ---
+# To Iterate is to go through items one by one in order
+# To iterate through a list we use a for loop 
+
+fruits = ["apple", "banana","orange"]
+print(len(fruits)) # Output: 3
+
+# len() is often used with loops to check lengths or control iteration
+
+for i in range(len(fruits)):
+    print(i,fruits[i]) # 0 apple,1 banana , 2 orange
+
+
 # ====================================
 # SAFE DEMO RUNNER
 # ====================================
