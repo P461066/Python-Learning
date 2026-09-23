@@ -19,6 +19,7 @@
 # DAY 13 - Lists: Basics
 # DAY 14 - Lists: Accessing, Modifying & Looping
 # DAY 15 - Lists: Methods
+# DAY 16 - Tuples
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -140,7 +141,10 @@ else:
 # print("Hello " + name)
 
 # --- 13. TYPE CONVERSION ---
-# int() -> integer, float() -> decimal, str() -> string, bool() -> boolean
+# int() -> integer
+# float() -> decimal
+# str() -> string
+# bool() -> boolean
 # age = int(input("Enter your age: "))
 # price = float(input("Enter price: "))
 
@@ -249,7 +253,7 @@ def is_even(number):
 print(is_even(4))  # True
 print(is_even(7))  # False
 
-# print() displays a value. return gives a value back for reuse.
+# print() displays a value; return gives a value back for reuse.
 
 def with_print():
     print(10)
@@ -280,6 +284,18 @@ print(greet_with_default("Pablo", "Good morning"))
 # Correct:   def function(required_value, default_value="default"):
 # Incorrect: def function(default_value="default", required_value):
 
+# Another example:
+def introduce(name, age=18):
+    return f"My name is {name} and I am {age} years old."
+
+print(introduce("Pablo"))      # Uses the default age: 18
+print(introduce("Pablo", 20))  # Uses the provided age: 20
+
+# Summary:
+# - A default parameter already has a value.
+# - You can replace the default by passing another argument.
+# - Required parameters must be written before default parameters.
+
 # ====================================
 # 📅 DAY 13 - 20 September 2026
 # ====================================
@@ -299,8 +315,6 @@ print(len(numbers))  # 4
 # ====================================
 # 📅 DAY 14 - 21 September 2026
 # ====================================
-
-# TOPIC: LISTS - ACCESSING, MODIFYING, AND LOOPING
 
 # --- 23. ACCESSING LIST ITEMS ---
 # Indexing starts at 0, not 1.
@@ -336,20 +350,7 @@ for index, fruit in enumerate(fruits):
 
 # --- 26. LIST LENGTH ---
 # len() returns the number of items in a list.
-
 print(len(fruits))  # 3
-
-# ====================================
-# DAY 14 SUMMARY
-# ====================================
-
-# - Lists store multiple values in one variable.
-# - List indexes start at 0.
-# - Use negative indexes to count from the end.
-# - Use an index to change a list item.
-# - len(list) returns the number of items.
-# - Loop directly through values when indexes are unnecessary.
-# - Use enumerate() when you need both indexes and values.
 
 # ====================================
 # 📅 DAY 15 - 22 September 2026
@@ -384,59 +385,45 @@ scores.sort()
 print(scores)  # [1, 3, 7, 9]
 
 # ====================================
-# DAY 15 SUMMARY
+# 📅 DAY 16 - 23 September 2026
 # ====================================
 
-# - append() adds a value to the end of a list.
-# - clear() removes every item from the list.
-# - pop() removes and returns an item by index.
-# - reverse() flips the list order.
-# - sort() arranges the list in ascending order.
+# --- 28. TUPLES ---
+# A tuple is an immutable (read-only) data structure.
+# It is created using parentheses ().
+# You access elements using indexing, including negative indexing.
 
-# ====================================
-# DAY 16 - 23 September 2026
-# ====================================
-
-# --- 26. TUPLE ---
-# Immutable (read only) data structure. Can't change after creation 
-# Created using paranthese ()
-# Access elements using indexing,including negative indexing 
-
-# Sytanx (Creating a Tuple)
 coordinates = (67, 678)
 
 # Accessing elements
-x = coordinates[0] #67
-y = coordinates[1] #678
+x = coordinates[0]  # 67
+y = coordinates[1]  # 678
 
-# LIST vs TUPLE 
-my_list = [1, 2, 3] # Mutable(can change)
-my_tuple = (1, 2, 3) # Immuatable(cannot change)
+# LIST vs TUPLE
+my_list = [1, 2, 3]    # Mutable (can change)
+my_tuple = (1, 2, 3)    # Immutable (cannot change)
 
-my_list[0] = 10 #it changes 1 into 10 
-#my_tuple[0] = 10 it doesnt work because you cannot change values in Tuple
+my_list[0] = 10  # This works
+# my_tuple[0] = 10  # This does not work
 
 # TIP
-# Use List when you need to change it 
-# Use Tuple when you want it to stay fixed
+# Use a list when you need to change it.
+# Use a tuple when you want it to stay fixed.
 
-# --- 24.Iterate ---
-# To Iterate is to go through items one by one in order
-# To iterate through a list we use a for loop 
+# --- 29. ITERATING THROUGH A LIST ---
+# To iterate is to go through items one by one.
+# We often use a for loop.
 
-fruits = ["apple", "banana","orange"]
-print(len(fruits)) # Output: 3
+fruits = ["apple", "banana", "orange"]
+print(len(fruits))  # Output: 3
 
-# len() is often used with loops to check lengths or control iteration
-
+# len() is often used with loops to control iteration.
 for i in range(len(fruits)):
-    print(i,fruits[i]) # 0 apple,1 banana , 2 orange
-
+    print(i, fruits[i])  # 0 apple, 1 banana, 2 orange
 
 # ====================================
 # SAFE DEMO RUNNER
 # ====================================
-
 
 def _demo():
     demo_fruits = ["apple", "banana", "cherry"]
