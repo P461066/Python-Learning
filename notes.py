@@ -20,30 +20,42 @@
 # DAY 14 - Lists: Accessing, Modifying & Looping
 # DAY 15 - Lists: Methods
 # DAY 16 - Tuples
+# DAY 17 - enumerate() & String Methods
+# CURRENT TOPIC - enumerate() & String Methods
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
 # ====================================
 
 # --- 1. VARIABLES ---
-# A variable stores data. Python detects the data type automatically.
+# A variable is a container that stores data.
+# Python automatically detects the data type.
+
 age = 20
 score = 2100
 
-# Use snake_case for variable names.
+# Tip:
+# Variable names cannot contain spaces.
+# Use snake_case instead.
+# Example:
 # my score = 100   ❌ invalid
 # my_score = 1000  ✅ valid
 
-# --- 2. STRINGS (str) ---
-text1 = "This is a sentence"
-text2 = 'This is also a sentence'
+# --- 2. STRING (str) ---
+# A string stores text.
+text1 = 'This is a sentence'
+text2 = "This is also a sentence"
 
-# --- 3. BOOLEANS (bool) ---
-# A boolean can only be True or False.
+# Tip:
+# Use single quotes or double quotes around text.
+
+# --- 3. BOOLEAN (bool) ---
+# A boolean only has two values: True or False.
 variable_true = True
 variable_false = False
 
-# Python is case-sensitive:
+# Tip:
+# Python is case-sensitive.
 # true  ❌ wrong
 # True  ✅ correct
 
@@ -52,66 +64,106 @@ variable_false = False
 # ====================================
 
 # --- 4. ARITHMETIC OPERATORS ---
-# + addition, - subtraction, * multiplication
-# / division, % remainder, ** exponent
+# + addition
+# - subtraction
+# * multiplication
+# / division
+# % modulus (remainder)
+# ** exponent
 
+# Example:
 a = 2
 b = 3
-print(a + b)  # 5
+c = a + b
+print(c)  # 5
 
 # --- 5. AUGMENTED ASSIGNMENT ---
-x = 10
-x += 3    # 13
-x -= 2    # 11
-x *= 4    # 44
-x /= 2    # 22.0
-x %= 5    # 2.0
+# Instead of writing a = a + 3, we can write a += 3
 
-# --- 6. MODULUS (%) ---
-remainder = 10 % 3  # 1
-# number % 2 == 0 -> even
-# number % 2 != 0 -> odd
+x = 10
+x += 3    # x = 13
+x -= 2    # x = 11
+x *= 4    # x = 44
+x /= 2    # x = 22.0
+x %= 5    # x = 2.0
+
+# --- 6. MODULUS OPERATOR (%) ---
+# % returns the remainder of division.
+remainder = 10 % 3   # 10 / 3 = 3 remainder 1
+
+# Common use:
+# number % 2 == 0 -> even number
+# number % 2 != 0 -> odd number
 
 # --- 7. COMPARISON OPERATORS ---
-# == equal, != not equal, > greater than, < less than
-# >= greater than or equal to, <= less than or equal to
+# They compare two values and return True or False.
+# == equal to
+# != not equal to
+# > greater than
+# < less than
+# >= greater than or equal to
+# <= less than or equal to
+
+print(1 == 2)  # False
 print(1 == 1)  # True
 print(1 != 2)  # True
+print(1 > 2)   # False
 print(1 < 2)   # True
+print(1 >= 2)  # False
+print(1 <= 2)  # True
+
+# --- 8. LOGICAL OPERATORS ---
+# and -> True if both are True
+# or  -> True if at least one is True
+# not -> reverses the result
+
+result1 = (13 > 12 and 12 < 13)   # True
+result2 = (13 > 12 or 13 < 12)    # True
+result3 = not (13 < 12)           # True
 
 # ====================================
 # 📅 DAY 3 - 10 September 2026
 # ====================================
 
-# --- 8. LOGICAL OPERATORS ---
-# and -> both conditions must be True
-# or  -> at least one condition must be True
-# not -> reverses a result
-
-result1 = 13 > 12 and 12 < 13
-result2 = 13 > 12 or 13 < 12
-result3 = not (13 < 12)
-
 # --- 9. DE MORGAN'S LAWS ---
 # not (A and B) == (not A) or (not B)
 # not (A or B)  == (not A) and (not B)
 
+# Example 1:
 number = 15
 result = not (number >= 1 and number <= 10)
+# This is the same as: number < 1 or number > 10
 print(result)  # True
+
+# Example 2:
+is_student = False
+is_employed = False
+result2 = not (is_student or is_employed)
+print(result2)  # True
 
 # ====================================
 # 📅 DAY 4 - 11 September 2026
 # ====================================
 
-# --- 10. IF / ELIF / ELSE ---
+# --- 10. IF STATEMENTS ---
+# An if statement runs code only when a condition is True.
+
+# Syntax:
+# if condition:
+#     code here
+# elif another_condition:
+#     code here
+# else:
+#     code here
+
 age = 20
 if age > 18:
     status = "Adult"
 else:
     status = "Child"
-print(status)
+print(status)  # Adult
 
+# Example with elif:
 score = 75
 if score >= 90:
     grade = "A"
@@ -119,10 +171,14 @@ elif score >= 50:
     grade = "B"
 else:
     grade = "C"
-print(grade)
+print(grade)  # B
 
 # --- 11. NESTED IF STATEMENTS ---
+# You can put if statements inside other if statements.
+
+age = 20
 has_license = True
+
 if age > 18:
     if has_license:
         print("You can drive")
@@ -136,153 +192,242 @@ else:
 # ====================================
 
 # --- 12. INPUT() ---
-# input() always returns a string.
+# input() gets text from the user.
+# It always returns a string.
+
+# Example:
 # name = input("Enter your name: ")
 # print("Hello " + name)
 
 # --- 13. TYPE CONVERSION ---
-# int() -> integer
-# float() -> decimal
+# int()  -> integer
+# float() -> decimal number
 # str() -> string
 # bool() -> boolean
+
+# Example:
 # age = int(input("Enter your age: "))
 # price = float(input("Enter price: "))
 
-# "5" + "5" = "55"
-# 5 + 5 = 10
+# --- 14. IMPORTANT TIP ---
+# "5" + "5" = "55"  # string concatenation
+# 5 + 5 = 10        # numeric addition
+
+# So if you want to add numbers from user input, convert them first.
 
 # ====================================
 # 📅 DAY 6 - 13 September 2026
 # ====================================
 
-# --- 14. WHILE LOOP ---
+# --- 15. WHILE LOOP ---
+# A while loop runs while a condition is True.
+
+# Syntax:
+# while condition:
+#     code
+
+# Example:
 count = 1
 while count <= 5:
     print(count)
     count += 1
 
-# --- 15. FOR LOOP ---
-for number in range(5):
-    print(number)  # 0, 1, 2, 3, 4
+# --- 16. FOR LOOP ---
+# A for loop is used to repeat code over a sequence.
+
+# Example:
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
 
 # ====================================
 # 📅 DAY 7 - 14 September 2026
 # ====================================
 
-# --- 16. BREAK AND CONTINUE ---
-for number in range(10):
-    if number % 2 == 0:
-        continue
-    print(number)  # odd numbers
+# --- 17. BREAK AND CONTINUE ---
+# continue -> skip the current iteration
+# break -> stop the loop completely
 
-for number in range(10):
-    if number == 6:
+# Continue example:
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)  # 1, 3, 5, 7, 9
+
+# Break example:
+for i in range(10):
+    if i == 6:
         break
-    print(number)  # 0 to 5
+    print(i)  # 0, 1, 2, 3, 4, 5
 
 # ====================================
 # 📅 DAY 8 - 15 September 2026
 # ====================================
 
-# --- 17. RANGE() ---
-# range(stop) -> 0 through stop - 1
-# range(start, stop) -> start through stop - 1
-# range(start, stop, step) -> custom step
+# --- 18. RANGE() ---
+# range(stop) -> starts at 0 and goes up to stop - 1
+# range(start, stop) -> starts at start and goes to stop - 1
+# range(start, stop, step) -> use custom step size
 
-for number in range(5):
-    print(number)
-for number in range(2, 6):
-    print(number)
-for number in range(1, 10, 2):
-    print(number)
-for number in range(10, 0, -2):
-    print(number)
+for i in range(5):
+    print(i)
+
+for i in range(2, 6):
+    print(i)
+
+for i in range(1, 10, 2):
+    print(i)
+
+for i in range(10, 0, -2):
+    print(i)
 
 # ====================================
 # 📅 DAY 9 - 16 September 2026
 # ====================================
 
-# --- 18. NESTED LOOPS ---
+# --- 19. NESTED LOOPS ---
+# A nested loop is a loop inside another loop.
+
 for x in range(2):
     for y in range(2):
         print(x, y)
 
-# Output: 0 0, 0 1, 1 0, 1 1
-# The inner loop completes once for every outer-loop value.
+# Output:
+# 0 0
+# 0 1
+# 1 0
+# 1 1
+
+# How it works:
+# The outer loop runs first.
+# For each outer loop value, the inner loop runs completely.
+# So the inner loop is repeated many times.
 
 # ====================================
 # 📅 DAY 10 - 17 September 2026
 # ====================================
 
-# --- 19. FUNCTIONS (def) ---
+# --- 20. FUNCTIONS (def) ---
 # A function is a reusable block of code.
+# It helps us organize code and avoid repetition.
+
+# Syntax:
+# def function_name(parameters):
+#     code to run
+#     return result (optional)
+
+# Example 1: simple function
 
 def greet(name):
     print(f"Hello {name}")
 
+# Call the function
 greet("Pablo")
 
+# Example 2: function that returns a value
 
-def add(first_number, second_number):
-    return first_number + second_number
+def add(a, b):
+    return a + b
 
-print(add(5, 7))  # 12
+result = add(5, 7)
+print(result)  # 12
 
+# Example 3: function with no parameters
 
 def say_hello():
     print("Hello world")
 
 say_hello()
 
+# Important points:
+# - def starts a function definition
+# - function_name should be descriptive
+# - parameters are values passed into the function
+# - return sends a value back to the caller
+# - A function is called by writing its name followed by parentheses
+
+# Real-life analogy:
+# A function is like a machine.
+# Input -> process -> output
+
+# Example:
+# def multiply(num1, num2):
+#     return num1 * num2
+# print(multiply(3, 4))  # 12
+
 # ====================================
 # 📅 DAY 11 - 18 September 2026
 # ====================================
 
-# --- 20. RETURN STATEMENT ---
-# return sends a value back and ends the function.
+# --- 21. RETURN STATEMENT ---
+# The return statement sends a value back to the caller.
+# It is used to get output from a function.
 
-def add_numbers(first_number, second_number):
-    return first_number + second_number
+# Syntax:
+# def function_name():
+#     return value
 
-print(add_numbers(2, 3))  # 5
+# Example:
+def add_numbers(a, b):
+    return a + b
 
+result = add_numbers(2, 3)
+print(result)  # 5
 
-def is_even(number):
-    return number % 2 == 0
+# Another example:
+def is_even(n):
+    return n % 2 == 0
 
 print(is_even(4))  # True
 print(is_even(7))  # False
 
-# print() displays a value; return gives a value back for reuse.
+# print() vs return
+# print() = shows text on the screen, but you cannot use it later
+# return = gives the value back so you can store it in a variable
 
+# Example:
 def with_print():
     print(10)
 
-
+# This does not return a useful value:
 def with_return():
     return 10
 
-x = with_print()   # None
-y = with_return()  # 10
+x = with_print()   # x = None
+y = with_return()  # y = 10
 print(x)
 print(y)
+
+# Tip:
+# Return ends the function immediately.
+# If no return is used, the function returns None by default.
 
 # ====================================
 # 📅 DAY 12 - 19 September 2026
 # ====================================
 
-# --- 21. DEFAULT PARAMETERS ---
+# --- 22. DEFAULT PARAMETERS ---
 # A default parameter is used when no argument is supplied.
 
+# Correct:
 def greet_with_default(name, greeting="Hello"):
     return f"{greeting}, {name}!"
 
-print(greet_with_default("Pablo"))
-print(greet_with_default("Pablo", "Good morning"))
+print(greet_with_default("Pablo"))                  # Hello, Pablo!
+print(greet_with_default("Pablo", "Good morning")) # Good morning, Pablo!
 
-# Required parameters must come before default parameters.
-# Correct:   def function(required_value, default_value="default"):
-# Incorrect: def function(default_value="default", required_value):
+# name is a required parameter.
+# greeting is a default parameter.
+
+# Incorrect:
+# def greet(greeting="Hello", name):
+#     return f"{greeting}, {name}!"
+
+# This causes a SyntaxError because a required parameter
+# cannot come after a default parameter.
+
+# Rule:
+# Required parameters must come first.
+# Default parameters come after them.
 
 # Another example:
 def introduce(name, age=18):
@@ -300,7 +445,7 @@ print(introduce("Pablo", 20))  # Uses the provided age: 20
 # 📅 DAY 13 - 20 September 2026
 # ====================================
 
-# --- 22. LIST BASICS ---
+# --- 23. LIST BASICS ---
 # A list stores multiple values in square brackets.
 # Lists are ordered, changeable, and indexed from 0.
 
@@ -316,7 +461,7 @@ print(len(numbers))  # 4
 # 📅 DAY 14 - 21 September 2026
 # ====================================
 
-# --- 23. ACCESSING LIST ITEMS ---
+# --- 24. ACCESSING LIST ITEMS ---
 # Indexing starts at 0, not 1.
 
 letters = ["a", "b", "c", "d", "e"]
@@ -327,14 +472,14 @@ print(letters[-1])  # e: last item
 # The last item can also be accessed with:
 # letters[len(letters) - 1]
 
-# --- 24. MODIFYING LIST ITEMS ---
+# --- 25. MODIFYING LIST ITEMS ---
 # Use an index to replace an item.
 
 fruits = ["apple", "banana", "cherry"]
 fruits[1] = "orange"
 print(fruits)  # ['apple', 'orange', 'cherry']
 
-# --- 25. LOOPING THROUGH A LIST ---
+# --- 26. LOOPING THROUGH A LIST ---
 # Loop directly through the values when you do not need indexes.
 
 for fruit in fruits:
@@ -348,7 +493,7 @@ for index in range(len(fruits)):
 for index, fruit in enumerate(fruits):
     print(index, fruit)
 
-# --- 26. LIST LENGTH ---
+# --- 27. LIST LENGTH ---
 # len() returns the number of items in a list.
 print(len(fruits))  # 3
 
@@ -356,7 +501,7 @@ print(len(fruits))  # 3
 # 📅 DAY 15 - 22 September 2026
 # ====================================
 
-# --- 27. BASIC LIST METHODS ---
+# --- 28. BASIC LIST METHODS ---
 # These are common built-in methods for lists.
 
 # append(element): adds an element to the end of the list
@@ -388,7 +533,7 @@ print(scores)  # [1, 3, 7, 9]
 # 📅 DAY 16 - 23 September 2026
 # ====================================
 
-# --- 28. TUPLES ---
+# --- 29. TUPLES ---
 # A tuple is an immutable (read-only) data structure.
 # It is created using parentheses ().
 # You access elements using indexing, including negative indexing.
@@ -400,64 +545,61 @@ x = coordinates[0]  # 67
 y = coordinates[1]  # 678
 
 # LIST vs TUPLE
-my_list = [1, 2, 3]    # Mutable (can change)
+my_list = [1, 2, 3]     # Mutable (can change)
 my_tuple = (1, 2, 3)    # Immutable (cannot change)
 
 my_list[0] = 10  # This works
 # my_tuple[0] = 10  # This does not work
 
-# TIP
+# TIP:
 # Use a list when you need to change it.
 # Use a tuple when you want it to stay fixed.
 
-# --- 29. ITERATING THROUGH A LIST ---
-# To iterate is to go through items one by one.
-# We often use a for loop.
-
-fruits = ["apple", "banana", "orange"]
-print(len(fruits))  # Output: 3
-
-# len() is often used with loops to control iteration.
-for i in range(len(fruits)):
-    print(i, fruits[i])  # 0 apple, 1 banana, 2 orange
-
 # ====================================
-# DAY 17 - 24 September 2026
+# 📅 DAY 17 - 24 September 2026
 # ====================================
 
-# --- 29. ENUMERATE() ---
+# --- 30. ENUMERATE() ---
 # enumerate() allows looping through a sequence
-# while keeping track of the index of each item
+# while keeping track of the index of each item.
 
 fruits = ["apple", "banana", "orange"]
 
 for index, fruit in enumerate(fruits):
-    print(f"index{index}: {fruit}")
+    print(f"Index {index}: {fruit}")
+
 # Output:
 # Index 0: apple
 # Index 1: banana
 # Index 2: orange
 
-# ---30. STRING METHODS ---
-# String methods can be used to perform actions on strings
+# --- 31. STRING METHODS ---
+# String methods can be used to perform actions on strings.
 
 # lower(): converts a string to lowercase
+text = "HELLO"
+print(text.lower())  # hello
 
-char = "HELLO"
-print(char.lower()) # hello
-
-# ---31. ITERATING OVER STRINGS ---
-# A string is a sequence of characters
-# You can loop through a string one character at a time 
+# --- 32. ITERATING OVER STRINGS ---
+# A string is a sequence of characters.
+# You can loop through a string one character at a time.
 
 text = "Hello"
 
-for char in text:
-    print(char)
-# You can also iterate through a string using its index
+for character in text:
+    print(character)
 
-for i in range(len(text)):
-    print(text[i])
+# You can also iterate through a string using its index.
+for index in range(len(text)):
+    print(text[index])
+
+# ====================================
+# CURRENT TOPIC: enumerate() & STRING METHODS
+# ====================================
+
+# enumerate() gives you both the index and the value.
+# String methods let you work with text.
+
 # ====================================
 # SAFE DEMO RUNNER
 # ====================================
