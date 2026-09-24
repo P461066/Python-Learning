@@ -422,6 +422,43 @@ for i in range(len(fruits)):
     print(i, fruits[i])  # 0 apple, 1 banana, 2 orange
 
 # ====================================
+# DAY 17 - 24 September 2026
+# ====================================
+
+# --- 29. ENUMERATE() ---
+# enumerate() allows looping through a sequence
+# while keeping track of the index of each item
+
+fruits = ["apple", "banana", "orange"]
+
+for index, fruit in enumerate(fruits):
+    print(f"index{index}: {fruit}")
+# Output:
+# Index 0: apple
+# Index 1: banana
+# Index 2: orange
+
+# ---30. STRING METHODS ---
+# String methods can be used to perform actions on strings
+
+# lower(): converts a string to lowercase
+
+char = "HELLO"
+print(char.lower()) # hello
+
+# ---31. ITERATING OVER STRINGS ---
+# A string is a sequence of characters
+# You can loop through a string one character at a time 
+
+text = "Hello"
+
+for char in text:
+    print(char)
+# You can also iterate through a string using its index
+
+for i in range(len(text)):
+    print(text[i])
+# ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
