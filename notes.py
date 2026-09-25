@@ -21,7 +21,8 @@
 # DAY 15 - Lists: Methods
 # DAY 16 - Tuples
 # DAY 17 - enumerate() & String Methods
-# CURRENT TOPIC - enumerate() & String Methods
+# DAY 18 - Joining Lists & List Slicing
+# CURRENT TOPIC - Joining Lists & List Slicing
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -594,40 +595,47 @@ for index in range(len(text)):
     print(text[index])
 
 # ====================================
-# DAY 18 - 25 September 2026
+# 📅 DAY 18 - 25 September 2026
 # ====================================
 
-# --- 33.JOINING A LIST INTO A STRING---
-# join() combines the items in a list into one string 
-# The string before .join() is used as separator
+# --- 33. JOINING A LIST INTO A STRING ---
+# join() combines the items in a list into one string.
+# The string before .join() is used as the separator.
 
-words = ["Hello", "World","Python"]
+words = ["Hello", "World", "Python"]
+text = " ".join(words)
+print(text)  # Hello World Python
 
-text = " " .join(words) # Joins with a space
-print(text) # Hello World Python 
+fruits = ["apple", "banana", "cherry"]
+line = ",".join(fruits)
+print(line)  # apple,banana,cherry
 
-fruit = ["apple", "banana", "cherry"]
-line = ",".join(fruits) # Join with a comma 
-print(line) # apple,banana,cherry 
+# --- 34. LIST SLICING ---
+# Slicing extracts a portion of a list.
+# The start index is included, but the stop index is excluded.
 
-# ---34. LIST SLICING---
-# Slicing extracts a portion of a list 
-# The start index is included,but the stop is excluded
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-numbers = [0, 1, 2,3, 4, 5, 6, 7, 8, 9]
-
-# Basic slicing 
-print(numbers[2:6]) # [2, 3, 4, 5]
+# Basic slicing
+print(numbers[2:6])  # [2, 3, 4, 5]
 
 # Omitting start begins from index 0
-print(numbers[:5]) # [0, 1, 2, 3, 4,]
+print(numbers[:5])  # [0, 1, 2, 3, 4]
 
-# Omitting stop goes until the end 
-print(numbers[5:]) # [5, 6, 7, 8, 9]
+# Omitting stop goes until the end
+print(numbers[5:])  # [5, 6, 7, 8, 9]
 
-# Syntax;
+# Syntax:
 # list[start:stop]
-# start is inclusive,stop is exclusive
+# start is inclusive, stop is exclusive
+
+# ====================================
+# CURRENT TOPIC: JOINING LISTS & LIST SLICING
+# ====================================
+
+# join() lets you combine list items into one string.
+# slicing lets you select part of a list.
+
 # ====================================
 # SAFE DEMO RUNNER
 # ====================================
