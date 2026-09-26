@@ -1,3 +1,3 @@
-name = Pablo 
+name = "Pablo"
 age = 20 
-print(name + age)
+print(f"{name} is {age}")
