@@ -682,7 +682,12 @@ print("mango" in fruits)       # False
 print("mango" not in fruits)   # True
 print("banana" not in fruits)  # False
 
-# --- 38. LIST MANIPULATION OPERATORS ---
+
+# --- 38. None---
+# It basically means notes i means notes 
+
+
+# --- 39. LIST MANIPULATION OPERATORS ---
 # + combines two lists into a new list.
 # * repeats a list a specified number of times.
 
