@@ -23,7 +23,8 @@
 # DAY 17 - enumerate() & String Methods
 # DAY 18 - Joining Lists & List Slicing
 # DAY 19 - List Manipulation Operators & Slicing
-# CURRENT TOPIC - List Manipulation Operators & Slicing
+# DAY 20 - Membership Operators & List Manipulation
+# CURRENT TOPIC - Membership Operators & List Manipulation
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -635,8 +636,7 @@ print(numbers[5:])  # [5, 6, 7, 8, 9]
 # ====================================
 
 # --- 35. LIST MANIPULATION OPERATORS ---
-# + combines lists
-# * repeats a list
+# + combines lists; * repeats a list.
 
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
@@ -647,10 +647,6 @@ numbers = [1, 2]
 repeated = numbers * 3
 print(repeated)  # [1, 2, 1, 2, 1, 2]
 
-# TIP:
-# List concatenation creates a new list.
-# List repetition duplicates the elements.
-
 # --- 36. SLICING WITH STEP ---
 # Syntax: list[start:stop:step]
 # start is inclusive
@@ -658,7 +654,6 @@ print(repeated)  # [1, 2, 1, 2, 1, 2]
 # step controls the jump size
 
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
 print(numbers[1:8:2])  # [1, 3, 5, 7]
 print(numbers[2:9:3])  # [2, 5, 8]
 print(numbers[-3:])    # [7, 8, 9]
@@ -671,17 +666,39 @@ print(numbers[::-1])   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 # - Empty space between : means "go until the end".
 # - Negative step reverses the order.
 
-# Another useful examples:
-# numbers[::2]  -> every second element
-# numbers[1::2] -> every second element starting from index 1
-
 # ====================================
-# CURRENT TOPIC: LIST MANIPULATION OPERATORS & SLICING
+# 📅 DAY 20 - 27 September 2026
 # ====================================
 
-# + lets you combine lists.
-# * lets you repeat a list.
-# slicing lets you extract a part of a list.
+# --- 37. MEMBERSHIP OPERATORS ---
+# Check if an element exists in a list.
+# element in list        -> True if the element is in the list.
+# element not in list    -> True if the element is not in the list.
+
+fruits = ["apple", "banana", "cherry"]
+
+print("banana" in fruits)     # True
+print("mango" in fruits)       # False
+print("mango" not in fruits)   # True
+print("banana" not in fruits)  # False
+
+# --- 38. LIST MANIPULATION OPERATORS ---
+# + combines two lists into a new list.
+# * repeats a list a specified number of times.
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+combined = list1 + list2
+print(combined)  # [1, 2, 3, 4, 5, 6]
+
+numbers = [1, 2] * 3
+print(numbers)  # [1, 2, 1, 2, 1, 2]
+
+# Key points:
+# - in checks whether an element is present.
+# - not in checks whether an element is absent.
+# - + combines lists.
+# - * repeats list elements.
 
 # ====================================
 # SAFE DEMO RUNNER
