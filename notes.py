@@ -706,6 +706,75 @@ print(numbers)  # [1, 2, 1, 2, 1, 2]
 # - * repeats list elements.
 
 # ====================================
+# DAY 21 - 03 OCTOBER 2026
+# ====================================
+
+# --- F-STRINGS---
+# F-STRINGS are used to display values on text without updating the text every time 
+# F-STRINGS have many ways you can use them 
+
+name = Mpho 
+age = 21
+print(f"My name is {name} and i am {age} years old") # it will output My name is Mpho and i am 21 years old
+
+# Another use of F-string 
+# 1. Padding with Zeros
+score = 7
+print(f"Zero-padded: {score:03}")  # Output: '007'
+
+# 2. Controlling Signs
+pos = 42
+neg = -21
+print(f"Signed Pos: {pos:+}")      # Output: '+42'
+print(f"Signed Neg: {neg:+}")      # Output: '-21'
+print(f"Default Neg: {neg:-}")     # Output: '-21' (shows only negative)
+
+# The colon : acts as a separator. It tells Python: "The variable/expression to format is on the left, and how I want to format it is on the right.
+
+# Alignment (<, >, ^)
+# <: Left-aligns the value (default for text).
+# >: Right-aligns the value (default for numbers).
+# ^: Center-aligns the value.
+
+# Fill Character 
+# By default, Python uses spaces to pad empty room.
+# However, you can put a custom character right before the alignment symbol to fill the empty space instead 
+
+#f"{score:*<5}" $\rightarrow$$\rightarrow$ 7**** (pads with stars up to a width of 5)
+
+# Width
+
+# An integer that specifies the minimum width of the output field. 
+#If the value is shorter than this width, padding is added.
+# f"{score:5}" pads with spaces to make it 5 characters wide).
+
+# Grouping Option (, or _)
+# Adds commas or underscores as thousands separators
+
+Type Code (d, f, b, x, etc.)
+
+Determines how the data itself is represented:
+
+    b for binary, x for hex, f for float, % for percentage, etc.
+
+
+# word = "Hello"  # This word is 5 characters long
+
+# Let's make it 11 characters wide total!
+# We have 6 extra spots to fill.
+
+# Example 1: Use a dash '-' to fill the gaps on the right
+print(f"{word:-<11}")  
+# Output: Hello------
+
+# Example 2: Use a star '*' to fill the gaps on the left
+print(f"{word:*>11}")  
+# Output: ******Hello
+
+# Example 3: Use a wave '~' to fill gaps on both sides (centered)
+print(f"{word:~^11}")  
+# Output: ~~~Hello~~~
+# ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
