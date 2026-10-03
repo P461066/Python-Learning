@@ -24,7 +24,8 @@
 # DAY 18 - Joining Lists & List Slicing
 # DAY 19 - List Manipulation Operators & Slicing
 # DAY 20 - Membership Operators & List Manipulation
-# CURRENT TOPIC - Membership Operators & List Manipulation
+# DAY 21 - F-Strings
+# CURRENT TOPIC - F-Strings & String Formatting
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -115,6 +116,10 @@ print(1 < 2)   # True
 print(1 >= 2)  # False
 print(1 <= 2)  # True
 
+# ====================================
+# 📅 DAY 3 - 10 September 2026
+# ====================================
+
 # --- 8. LOGICAL OPERATORS ---
 # and -> True if both are True
 # or  -> True if at least one is True
@@ -123,10 +128,6 @@ print(1 <= 2)  # True
 result1 = (13 > 12 and 12 < 13)   # True
 result2 = (13 > 12 or 13 < 12)    # True
 result3 = not (13 < 12)           # True
-
-# ====================================
-# 📅 DAY 3 - 10 September 2026
-# ====================================
 
 # --- 9. DE MORGAN'S LAWS ---
 # not (A and B) == (not A) or (not B)
@@ -678,16 +679,11 @@ print(numbers[::-1])   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 fruits = ["apple", "banana", "cherry"]
 
 print("banana" in fruits)     # True
-print("mango" in fruits)       # False
-print("mango" not in fruits)   # True
-print("banana" not in fruits)  # False
+print("mango" in fruits)      # False
+print("mango" not in fruits)  # True
+print("banana" not in fruits) # False
 
-
-# --- 38. None---
-# It basically means notes i means notes 
-
-
-# --- 39. LIST MANIPULATION OPERATORS ---
+# --- 38. LIST MANIPULATION OPERATORS ---
 # + combines two lists into a new list.
 # * repeats a list a specified number of times.
 
@@ -706,83 +702,121 @@ print(numbers)  # [1, 2, 1, 2, 1, 2]
 # - * repeats list elements.
 
 # ====================================
-# DAY 21 - 03 OCTOBER 2026
+# 📅 DAY 21 - 03 October 2026
 # ====================================
 
-# --- F-STRINGS---
-# F-STRINGS are used to display values on text without updating the text every time 
-# F-STRINGS have many ways you can use them 
+# --- 39. F-STRINGS ---
+# F-strings provide a clean way to insert variables into strings.
+# They use curly braces {} to embed expressions.
 
-name = Mpho 
+# Basic usage:
+name = "Mpho"
 age = 21
-print(f"My name is {name} and i am {age} years old") # it will output My name is Mpho and i am 21 years old
+print(f"My name is {name} and I am {age} years old")
+# Output: My name is Mpho and I am 21 years old
 
-# Another use of F-string 
-# 1. Padding with Zeros
+# ========================================
+# --- 40. F-STRING FORMATTING OPTIONS ---
+# ========================================
+
+# 1️⃣ PADDING WITH ZEROS
+# Useful for formatting numbers with leading zeros.
 score = 7
-print(f"Zero-padded: {score:03}")  # Output: '007'
+print(f"Zero-padded: {score:03}")
+# Output: Zero-padded: 007
 
-# 2. Controlling Signs
+# 2️⃣ CONTROLLING SIGNS (for positive/negative numbers)
 pos = 42
 neg = -21
-print(f"Signed Pos: {pos:+}")      # Output: '+42'
-print(f"Signed Neg: {neg:+}")      # Output: '-21'
-print(f"Default Neg: {neg:-}")     # Output: '-21' (shows only negative)
+print(f"Positive with sign: {pos:+}")
+# Output: Positive with sign: +42
 
-# The colon : acts as a separator. It tells Python: "The variable/expression to format is on the left, and how I want to format it is on the right.
+print(f"Negative with sign: {neg:+}")
+# Output: Negative with sign: -21
 
-# Alignment (<, >, ^)
-# <: Left-aligns the value (default for text).
-# >: Right-aligns the value (default for numbers).
-# ^: Center-aligns the value.
+# 3️⃣ ALIGNMENT (Left, Right, Center)
+# < = left-align, > = right-align, ^ = center-align
+word = "Hello"
 
-# Fill Character 
-# By default, Python uses spaces to pad empty room.
-# However, you can put a custom character right before the alignment symbol to fill the empty space instead 
+left_aligned = f"{word:-<11}"
+print(f"Left-aligned: {left_aligned}")
+# Output: Left-aligned: Hello------
 
-#f"{score:*<5}" $\rightarrow$$\rightarrow$ 7**** (pads with stars up to a width of 5)
+right_aligned = f"{word:*>11}"
+print(f"Right-aligned: {right_aligned}")
+# Output: Right-aligned: ******Hello
 
-# Width
+center_aligned = f"{word:~^11}"
+print(f"Center-aligned: {center_aligned}")
+# Output: Center-aligned: ~~~Hello~~~
 
-# An integer that specifies the minimum width of the output field. 
-#If the value is shorter than this width, padding is added.
-# f"{score:5}" pads with spaces to make it 5 characters wide).
+# 4️⃣ WIDTH SPECIFICATION
+# Pads the value to a minimum width (default is spaces).
+print(f"Width 10: |{word:10}|")
+# Output: Width 10: |Hello     |
 
-# Grouping Option (, or _)
-# Adds commas or underscores as thousands separators
+# 5️⃣ GROUPING WITH SEPARATORS
+# Use commas or underscores for thousands separators.
+salary = 1234567
+print(f"With commas: ${salary:,}")
+# Output: With commas: $1,234,567
 
-Type Code (d, f, b, x, etc.)
+print(f"With underscores: {salary:_}")
+# Output: With underscores: 1_234_567
 
-Determines how the data itself is represented:
+# 6️⃣ DECIMAL PLACES (for floats)
+pi = 3.14159265
+print(f"Pi with 2 decimals: {pi:.2f}")
+# Output: Pi with 2 decimals: 3.14
 
-    b for binary, x for hex, f for float, % for percentage, etc.
+print(f"Pi with 4 decimals: {pi:.4f}")
+# Output: Pi with 4 decimals: 3.1416
 
+# ========================================
+# --- 41. KEY POINTS ABOUT F-STRINGS ---
+# ========================================
 
-# word = "Hello"  # This word is 5 characters long
+# The colon : separates the variable from the format spec.
+# Syntax: f"{variable:format_spec}"
+#
+# Format spec components:
+#   - Alignment: <, >, ^
+#   - Fill character: any character before alignment
+#   - Width: minimum field width
+#   - Type: d, f, b, x, % etc.
 
-# Let's make it 11 characters wide total!
-# We have 6 extra spots to fill.
+# ====================================
+# DAY 21 SUMMARY
+# ====================================
 
-# Example 1: Use a dash '-' to fill the gaps on the right
-print(f"{word:-<11}")  
-# Output: Hello------
+# 📝 F-STRINGS ARE POWERFUL:
+# ✅ Insert variables directly into strings
+# ✅ Pad numbers with zeros
+# ✅ Align text left, right, or center
+# ✅ Add custom fill characters
+# ✅ Format decimals and grouping separators
+# ✅ More readable than old-style string formatting
 
-# Example 2: Use a star '*' to fill the gaps on the left
-print(f"{word:*>11}")  
-# Output: ******Hello
-
-# Example 3: Use a wave '~' to fill gaps on both sides (centered)
-print(f"{word:~^11}")  
-# Output: ~~~Hello~~~
 # ====================================
 # SAFE DEMO RUNNER
 # ====================================
 
+
 def _demo():
+    # List example
     demo_fruits = ["apple", "banana", "cherry"]
     print("List example:", demo_fruits)
     print("First item:", demo_fruits[0])
     print("List length:", len(demo_fruits))
+
+    # F-string example
+    name = "Pablo"
+    score = 95
+    print(f"\nF-string example: {name} scored {score}%")
+
+    # Formatted number
+    price = 1234.56
+    print(f"Formatted price: ${price:,.2f}")
 
 
 if __name__ == "__main__":
